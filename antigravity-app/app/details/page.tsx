@@ -2,11 +2,25 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Vessel } from "../lib/types";
 
+import { getPool, isDbConnected } from "../lib/db";
+import { scrapeVessels } from "../lib/scraper";
+
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/vessels", {
-    cache: "no-store",
-  });
-  return res.json();
+  let vessels: Vessel[] = [];
+  const dbActive = await isDbConnected();
+  if (dbActive) {
+    try {
+      const { rows } = await getPool().query('SELECT * FROM "Vessel" ORDER BY id');
+      vessels = rows;
+    } catch (err) {}
+  }
+  if (vessels.length === 0) {
+    try {
+      const raw = await scrapeVessels();
+      vessels = raw.map(v => ({ ...v, id: String(v.id) })) as Vessel[];
+    } catch (err) {}
+  }
+  return vessels;
 }
 
 export default async function VesselPage({
