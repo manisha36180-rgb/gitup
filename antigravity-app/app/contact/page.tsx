@@ -1,7 +1,7 @@
 export default function ContactPage() {
   return (
     <div style={{ width: "100%", backgroundColor: "#f8f9fa", padding: "80px 24px", minHeight: "80vh", display: "flex", flexDirection: "column", alignItems: "center" }}>
-      
+
       {/* Header Section */}
       <div style={{ maxWidth: "800px", textAlign: "center", marginBottom: "48px" }}>
         <h1 style={{ fontSize: "2.5rem", fontWeight: 800, color: "#0f2846", marginBottom: "16px" }}>Contact Us</h1>
@@ -13,11 +13,11 @@ export default function ContactPage() {
 
       {/* Main Container */}
       <div style={{ width: "100%", maxWidth: "700px" }}>
-        
+
         {/* Contact Form */}
         <form style={{ backgroundColor: "white", borderRadius: "24px", boxShadow: "0 10px 40px rgba(0,0,0,0.08)", border: "1px solid #f1f5f9", padding: "40px", marginBottom: "48px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-            
+
             <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
               <label style={{ fontSize: "0.875rem", fontWeight: 800, color: "#0f2846", textTransform: "uppercase", letterSpacing: "0.5px" }}>Full Name</label>
               <input
@@ -59,7 +59,7 @@ export default function ContactPage() {
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "24px" }}>
           {[
             { icon: "📧", label: "Email", value: "info@marineauctions.com" },
-            { icon: "📞", label: "Phone", value: "+91 123456789" },
+            { icon: "📞", label: "Phone", value: "123456789" },
             { icon: "📍", label: "Location", value: "Delhi, India" },
           ].map((c) => (
             <div key={c.label} style={{ flex: "1 1 200px", minWidth: "200px", backgroundColor: "white", borderRadius: "20px", padding: "32px 24px", textAlign: "center", border: "1px solid #f1f5f9", boxShadow: "0 4px 20px rgba(0,0,0,0.05)" }}>
