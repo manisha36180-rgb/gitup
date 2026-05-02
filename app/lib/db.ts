@@ -3,7 +3,7 @@ import { Pool } from "pg";
 const isProduction = process.env.NODE_ENV === "production";
 const connectionString = process.env.DATABASE_URL || process.env.POSTGRES_URL;
 
-// Only use local defaults if NOT in production OR if explicitly requested
+// Only instantiate pool if we have a connection string or are in dev
 export const pool = new Pool(
   connectionString 
     ? { connectionString, ssl: { rejectUnauthorized: false } }
@@ -13,14 +13,14 @@ export const pool = new Pool(
         database: process.env.DB_NAME || "marine_db",
         password: process.env.DB_PASSWORD || "Manisha36180",
         port: parseInt(process.env.DB_PORT || "5432"),
-        connectionTimeoutMillis: 5000, // 5 second timeout
+        connectionTimeoutMillis: 2000,
       }
 );
 
-// Helper to check if DB is available
+// Helper to check if DB is available - Force FALSE in production if no connection string
 export async function isDbConnected() {
-  // In production, if no connection string is provided, don't even try localhost
   if (isProduction && !connectionString) {
+    console.log("Production: No database connection string found. Using scraper fallback.");
     return false;
   }
 
