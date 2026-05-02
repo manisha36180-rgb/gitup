@@ -14,8 +14,9 @@ export default async function VesselDetailsPage(props: {
   
   let vessel: Vessel | null = null;
   const dbActive = await isDbConnected();
+  const isNumericId = /^\d+$/.test(params.id);
 
-  if (dbActive) {
+  if (dbActive && isNumericId) {
     try {
       const { rows } = await pool.query('SELECT * FROM "Vessel" WHERE id = $1', [params.id]);
       vessel = rows[0] as Vessel;
