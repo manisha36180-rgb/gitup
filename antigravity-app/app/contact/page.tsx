@@ -59,8 +59,8 @@ export default function ContactPage() {
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "24px" }}>
           {[
             { icon: "📧", label: "Email", value: "info@marineauctions.com" },
-            { icon: "📞", label: "Phone", value: "+61 7 3268 3614" },
-            { icon: "📍", label: "Location", value: "Brisbane, Australia" },
+            { icon: "📞", label: "Phone", value: "+91 123456789" },
+            { icon: "📍", label: "Location", value: "Delhi, India" },
           ].map((c) => (
             <div key={c.label} style={{ flex: "1 1 200px", minWidth: "200px", backgroundColor: "white", borderRadius: "20px", padding: "32px 24px", textAlign: "center", border: "1px solid #f1f5f9", boxShadow: "0 4px 20px rgba(0,0,0,0.05)" }}>
               <div style={{ fontSize: "2.5rem", marginBottom: "16px" }}>{c.icon}</div>

@@ -42,8 +42,8 @@ export default function RootLayout({
             </p>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px", fontSize: "0.9rem", color: "#bfdbfe" }}>
               <span>📧 info@marineauctions.com</span>
-              <span>📞 +61 7 3268 3614</span>
-              <span>📍 Brisbane, Australia</span>
+              <span>📞 +91 123456789</span>
+              <span>📍 Delhi, India</span>
             </div>
           </div>
           <div style={{ borderTop: "1px solid #1e3a5f", padding: "14px", color: "#60a5fa", fontSize: "0.8rem" }}>
