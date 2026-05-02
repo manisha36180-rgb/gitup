@@ -89,8 +89,9 @@ export default async function AuctionsPage({
 
     if (query) {
       vessels = vessels.filter(v => 
-        v.name.toLowerCase().includes(query) || 
-        v.location.toLowerCase().includes(query)
+        v.name?.toLowerCase().includes(query) || 
+        v.location?.toLowerCase().includes(query) ||
+        v.type?.toLowerCase().includes(query)
       );
     }
 
