@@ -2,7 +2,7 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Marine Auctions | Find Your Dream Vessel",
+  title: "Online Marine Auction | Find Your Dream Vessel",
   description: "Live vessel auction platform sourcing data from top marine auction houses worldwide.",
 };
 
@@ -19,8 +19,8 @@ export default function RootLayout({
         <nav style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 40px", background: "#0f2846", color: "white", position: "sticky", top: 0, zIndex: 50, boxShadow: "0 2px 10px rgba(0,0,0,0.3)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <span style={{ fontSize: "1.5rem" }}>⚓</span>
-            <span style={{ fontWeight: 800, fontSize: "1.2rem", color: "white" }}>Marine</span>
-            <span style={{ fontWeight: 800, fontSize: "1.2rem", color: "#0EA5E9" }}>Auctions</span>
+            <span style={{ fontWeight: 800, fontSize: "1.2rem", color: "white" }}>Online</span>
+            <span style={{ fontWeight: 800, fontSize: "1.2rem", color: "#0EA5E9" }}>Marine Auction</span>
           </div>
           <div style={{ display: "flex", gap: "32px", fontSize: "0.95rem" }}>
             <Link href="/" className="nav-link">Home</Link>
@@ -47,7 +47,7 @@ export default function RootLayout({
             </div>
           </div>
           <div style={{ borderTop: "1px solid #1e3a5f", padding: "14px", color: "#60a5fa", fontSize: "0.8rem" }}>
-            © {new Date().getFullYear()} Marine Auctions. All Rights Reserved.
+            © {new Date().getFullYear()} Online Marine Auction. All Rights Reserved.
           </div>
         </footer>
 
