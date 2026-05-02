@@ -43,6 +43,37 @@ export default async function VesselDetailsPage(props: {
     }
   }
 
+  // Fallback to demo vessels
+  if (!vessel) {
+    const demoVessels = [
+      {
+        id: "demo_1",
+        name: "Luxury Motor Yacht - 80ft",
+        price: "$2,450,000",
+        location: "Sydney, Australia",
+        image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800",
+        images: ["https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800"],
+        status: "Active",
+        description: "A stunning 80ft luxury motor yacht in pristine condition.",
+        type: "Motor Yacht",
+        year: "2021"
+      },
+      {
+        id: "demo_2",
+        name: "Classic Sailing Schooner",
+        price: "€850,000",
+        location: "Monaco",
+        image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800",
+        images: ["https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800"],
+        status: "Active",
+        description: "Beautifully restored classic schooner for the serious sailor.",
+        type: "Sailing Vessel",
+        year: "1995"
+      }
+    ];
+    vessel = demoVessels.find(v => v.id === params.id) || null;
+  }
+
   if (!vessel) return notFound();
 
   const hasLocalImage = vessel.image?.startsWith("/vessels/eco/");
