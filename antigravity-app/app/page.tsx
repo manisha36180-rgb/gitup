@@ -31,16 +31,16 @@ export default function Home() {
       <section style={{ background: "white", padding: "80px 24px", textAlign: "center" }}>
         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "2.25rem", fontWeight: 800, color: "#0f2846", marginBottom: "16px" }}>
-            Welcome to Marine Auctions
+            Welcome to Shanthi Marine Auctions
           </h2>
           <div style={{ width: "64px", height: "4px", background: "#0EA5E9", margin: "0 auto 40px auto", borderRadius: "99px" }} />
           <p style={{ fontSize: "1.05rem", color: "#4a5568", lineHeight: 1.85, marginBottom: "20px" }}>
-            Marine Auctions is your premier global destination for discovering premium luxury yachts,
+            Shanthi Marine Auctions is your premier global destination for discovering premium luxury yachts,
             sport fishing vessels, and commercial crafts. We present listings directly
             from the world&apos;s most trusted marine auction houses in a clean, professional interface.
           </p>
           <p style={{ fontSize: "1.05rem", color: "#4a5568", lineHeight: 1.85 }}>
-            Whether you&apos;re searching for a premium cruiser or a commercial vessel, Marine Auctions provides
+            Whether you&apos;re searching for a premium cruiser or a commercial vessel, Shanthi Marine Auctions provides
             a transparent and reliable browsing experience. Our mission is to connect serious buyers with authentic
             vessels, putting the best of the marine market at your fingertips.
           </p>
