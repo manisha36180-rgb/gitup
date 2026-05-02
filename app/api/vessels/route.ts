@@ -1,11 +1,11 @@
-import { pool, isDbConnected } from "../../lib/db";
+import { getPool, isDbConnected } from "../../lib/db";
 import { scrapeVessels } from "../../lib/scraper";
 
 export async function GET() {
   try {
     const dbActive = await isDbConnected();
     if (dbActive) {
-      const { rows } = await pool.query('SELECT * FROM "Vessel" ORDER BY id');
+      const { rows } = await getPool().query('SELECT * FROM "Vessel" ORDER BY id');
       if (rows.length > 0) return Response.json(rows);
     }
     

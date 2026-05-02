@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { pool, isDbConnected } from "../../lib/db";
+import { getPool, isDbConnected } from "../../lib/db";
 import { Vessel, RawVessel } from "../../lib/types";
 import { getVesselById } from "../../lib/scraper";
 
@@ -18,7 +18,7 @@ export default async function VesselDetailsPage(props: {
 
   if (dbActive && isNumericId) {
     try {
-      const { rows } = await pool.query('SELECT * FROM "Vessel" WHERE id = $1', [params.id]);
+      const { rows } = await getPool().query('SELECT * FROM "Vessel" WHERE id = $1', [params.id]);
       vessel = rows[0] as Vessel;
     } catch (err) {
       console.error("DB detail fetch failed:", err);

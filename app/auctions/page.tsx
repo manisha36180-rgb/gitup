@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { pool, isDbConnected } from "../lib/db";
+import { getPool, isDbConnected } from "../lib/db";
 import { Vessel, RawVessel } from "../lib/types";
 import { scrapeVessels } from "../lib/scraper";
 
@@ -21,7 +21,7 @@ export default async function AuctionsPage({
     if (dbActive) {
       try {
         if (query) {
-          const { rows } = await pool.query(`
+          const { rows } = await getPool().query(`
             SELECT * FROM "Vessel"
             WHERE name ILIKE $1
                OR location ILIKE $1
@@ -29,7 +29,7 @@ export default async function AuctionsPage({
           `, [`%${query}%`]);
           vessels = rows;
         } else {
-          const { rows } = await pool.query('SELECT * FROM "Vessel" ORDER BY id');
+          const { rows } = await getPool().query('SELECT * FROM "Vessel" ORDER BY id');
           vessels = rows;
         }
       } catch (err) {
