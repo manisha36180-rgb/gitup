@@ -1,4 +1,4 @@
-import { pool } from "../lib/db";
+import { getPool } from "../lib/db";
 
 export async function GET(req) {
   const { searchParams } = new URL(req.url);
@@ -7,12 +7,12 @@ export async function GET(req) {
   try {
     let result;
     if (query) {
-      result = await pool.query(
+      result = await getPool().query(
         `SELECT * FROM "Vessel" WHERE name ILIKE $1 OR location ILIKE $1 OR type ILIKE $1`,
         [`%${query}%`]
       );
     } else {
-      result = await pool.query(`SELECT * FROM "Vessel"`);
+      result = await getPool().query(`SELECT * FROM "Vessel"`);
     }
 
     return Response.json(result.rows);
