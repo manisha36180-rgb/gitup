@@ -13,7 +13,7 @@ const AU_BASE = "https://www.marineauctions.com.au";
 // ─── Scrape an individual AU vessel detail page ────────────────────────────────
 async function scrapeAUDetail(detailUrl: string): Promise<{ images: string[]; description: string; specs: string }> {
   try {
-    const { data } = await axios.get(detailUrl, { headers: BROWSER_HEADERS, timeout: 10000 });
+    const { data } = await axios.get(detailUrl, { headers: BROWSER_HEADERS, timeout: 4000 });
     const $ = cheerio.load(data);
 
     // Collect vessel images — only from /media/website_pages/ path (excludes logo, icons, ads)
@@ -390,72 +390,44 @@ export async function scrapeVessels(): Promise<RawVessel[]> {
   // ── SITE 1: Maritime Auction Eco (curated verified data) ──────────────────
   results.push(...ECO_VESSELS);
 
-  // ── SITE 2: Marine Auctions AU — listing page + detail pages ─────────────
+  // ── SITE 2: Marine Auctions AU — listing page only ─────────────
   try {
-    const auStubs: { name: string; location: string; listImage: string; detailUrl: string; auctionInfo: string }[] = [];
     const paths = ["/forthcoming-auctions/", "/boats-for-sale/"];
 
     for (const p of paths) {
-      const { data: listHtml } = await axios.get(
-        `${AU_BASE}${p}`,
-        { timeout: 15000, headers: BROWSER_HEADERS }
-      );
-      const $list = cheerio.load(listHtml);
+      try {
+        const { data: listHtml } = await axios.get(
+          `https://www.marineauctions.com.au${p}`,
+          { timeout: 5000, headers: { "User-Agent": "Mozilla/5.0" } }
+        );
+        const $list = cheerio.load(listHtml);
 
-      $list(".flexItem").each((i, el) => {
-        const name = $list(el).find("h4").first().text().trim();
-        if (!name || name.length < 5) return;
+        $list(".flexItem").each((i, el) => {
+          const name = $list(el).find("h4").first().text().trim();
+          if (!name || name.length < 5) return;
 
-        const strongText    = $list(el).find(".flexItem__content p strong").first().text();
-        const locationMatch = strongText.match(/Located:\s*([^\n]+)/);
-        const location      = locationMatch ? locationMatch[1].trim() : "";
-        const auctionMatch  = strongText.match(/Online Auction:\s*(.+?)(?:\n|$)/);
-        const auctionInfo   = auctionMatch ? auctionMatch[1].replace(/\s+/g, " ").trim() : "";
+          const imgEl      = $list(el).find("img").first();
+          const rawImg     = imgEl.attr("data-src") || imgEl.attr("src") || "";
+          const listImage  = rawImg.startsWith("/") ? `https://www.marineauctions.com.au${rawImg}` : rawImg;
 
-        const imgEl      = $list(el).find("img").first();
-        const rawImg     = imgEl.attr("data-src") || imgEl.attr("src") || "";
-        const listImage  = rawImg.startsWith("/") ? `${AU_BASE}${rawImg}` : rawImg;
+          const href      = $list(el).find("a.s8-templates-button-linkOverlay").attr("href") || "";
+          const detailUrl = href.startsWith("http") ? href : href ? `https://www.marineauctions.com.au${href}` : "";
 
-        const href      = $list(el).find("a.s8-templates-button-linkOverlay").attr("href") || "";
-        const detailUrl = href.startsWith("http") ? href : href ? `${AU_BASE}${href}` : "";
-
-        auStubs.push({ name, location, listImage, detailUrl, auctionInfo });
-      });
-    }
-
-    // Step B: Fetch each detail page in parallel (max 5 concurrent)
-    const BATCH = 5;
-    for (let i = 0; i < auStubs.length; i += BATCH) {
-      const batch = auStubs.slice(i, i + BATCH);
-      const detailResults = await Promise.all(
-        batch.map(stub =>
-          stub.detailUrl
-            ? scrapeAUDetail(stub.detailUrl)
-            : Promise.resolve({ images: [], description: "", specs: "" })
-        )
-      );
-
-      batch.forEach((stub, j) => {
-        const detail = detailResults[j];
-        const images = detail.images.length > 0 ? detail.images : [stub.listImage];
-        const image = images[0];
-
-        // Build full description from detail page body text
-        const fullDescription = [detail.description, detail.specs].filter(Boolean).join(" ").trim();
-
-        results.push({
-          id: `au_${i + j}`,
-          name: stub.name,
-          location: stub.location,
-          image,
-          images,
-          source: "Marine Auctions AU",
-          detailUrl: stub.detailUrl,
-          auctionInfo: stub.auctionInfo,
-          description: fullDescription,
-          price: "Register to Bid",
+          results.push({
+            id: `au_${results.length}`,
+            name,
+            location: "Australia",
+            image: listImage,
+            images: [listImage],
+            source: "Marine Auctions AU",
+            detailUrl,
+            description: "View full details on the auction page.",
+            price: "Register to Bid",
+          });
         });
-      });
+      } catch (err) {
+        console.error(`Failed to scrape ${p}:`, err);
+      }
     }
   } catch (err) {
     console.error("Marine Auctions AU failed:", err);
