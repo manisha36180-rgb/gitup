@@ -158,21 +158,11 @@ export default async function VesselDetailsPage(props: {
         <p style={{ color: "#4a5568", lineHeight: 1.8, fontSize: "0.95rem", margin: 0 }}>{vessel.description}</p>
       </div>
 
-      {/* CTA */}
-      <div style={{ background: "#0f2846", borderRadius: "16px", padding: "32px", textAlign: "center" }}>
-        <h3 style={{ color: "white", fontSize: "1.3rem", fontWeight: 800, marginBottom: "8px" }}>Interested in This Vessel?</h3>
-        <p style={{ color: "#93c5fd", fontSize: "0.875rem", marginBottom: "24px" }}>Place your bid on the original auction platform.</p>
-        <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/auctions" style={{ background: "white", color: "#0f2846", fontWeight: 700, padding: "12px 28px", borderRadius: "10px", textDecoration: "none" }}>
-            ← Browse More
-          </Link>
-          {vessel.detailUrl && (
-            <a href={vessel.detailUrl} target="_blank" rel="noopener noreferrer"
-              style={{ background: "#0EA5E9", color: "white", fontWeight: 700, padding: "12px 28px", borderRadius: "10px", textDecoration: "none" }}>
-              View Original Listing →
-            </a>
-          )}
-        </div>
+      {/* Back Button */}
+      <div style={{ textAlign: "center", marginTop: "40px" }}>
+        <Link href="/auctions" style={{ display: "inline-block", background: "#0f2846", color: "white", fontWeight: 700, padding: "12px 32px", borderRadius: "10px", textDecoration: "none" }}>
+          ← Back to Auctions
+        </Link>
       </div>
     </div>
   );

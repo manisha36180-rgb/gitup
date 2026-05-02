@@ -129,7 +129,7 @@ export default async function AuctionsPage({
                 className="bg-[#0EA5E9] hover:bg-blue-500 transition text-white font-bold px-8 text-base cursor-pointer"
                 suppressHydrationWarning
               >
-                🔍 Search
+                Search
               </button>
             </form>
           </div>
@@ -143,7 +143,6 @@ export default async function AuctionsPage({
 
         {vessels.length === 0 ? (
           <div className="text-center py-20">
-            <div className="text-6xl mb-4">🔍</div>
             <p className="text-gray-500 text-xl">No vessels found matching your search.</p>
             <Link href="/auctions" className="mt-6 inline-block text-[#0EA5E9] font-semibold hover:underline">
               Clear search
