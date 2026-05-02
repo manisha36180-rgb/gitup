@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { pool } from "../lib/db";
-import { Vessel } from "../lib/types";
+import { pool, isDbConnected } from "../lib/db";
+import { Vessel, RawVessel } from "../lib/types";
+import { scrapeVessels } from "../lib/scraper";
 
 export const dynamic = 'force-dynamic';
 
@@ -13,18 +14,49 @@ export default async function AuctionsPage({
   const resolvedParams = await searchParams;
   const query = resolvedParams?.query?.toLowerCase() || "";
   
-  let vessels = [];
-  if (query) {
-    const { rows } = await pool.query(`
-      SELECT * FROM "Vessel"
-      WHERE name ILIKE $1
-         OR location ILIKE $1
-         OR type ILIKE $1
-    `, [`%${query}%`]);
-    vessels = rows;
-  } else {
-    const { rows } = await pool.query('SELECT * FROM "Vessel" ORDER BY id');
-    vessels = rows;
+  let vessels: Vessel[] = [];
+  const dbActive = await isDbConnected();
+
+  if (dbActive) {
+    try {
+      if (query) {
+        const { rows } = await pool.query(`
+          SELECT * FROM "Vessel"
+          WHERE name ILIKE $1
+             OR location ILIKE $1
+             OR type ILIKE $1
+        `, [`%${query}%`]);
+        vessels = rows;
+      } else {
+        const { rows } = await pool.query('SELECT * FROM "Vessel" ORDER BY id');
+        vessels = rows;
+      }
+    } catch (err) {
+      console.error("Query failed, falling back to scraper:", err);
+    }
+  }
+
+  // Fallback to scraper if no vessels found or DB failed
+  if (vessels.length === 0) {
+    const rawVessels = await scrapeVessels();
+    vessels = rawVessels.map((rv: RawVessel) => ({
+      ...rv,
+      id: String(rv.id),
+      price: rv.price || "Contact for Price",
+      location: rv.location || "International",
+      image: rv.image || "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800",
+      images: rv.images || [],
+      status: "Active",
+      description: rv.description || "No description available.",
+      type: "Vessel",
+    })) as Vessel[];
+
+    if (query) {
+      vessels = vessels.filter(v => 
+        v.name.toLowerCase().includes(query) || 
+        v.location.toLowerCase().includes(query)
+      );
+    }
   }
 
   return (

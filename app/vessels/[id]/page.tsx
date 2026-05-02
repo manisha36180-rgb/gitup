@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { pool } from "../../lib/db";
-import { Vessel } from "../../lib/types";
+import { pool, isDbConnected } from "../../lib/db";
+import { Vessel, RawVessel } from "../../lib/types";
+import { getVesselById } from "../../lib/scraper";
 
 export const dynamic = 'force-dynamic';
 
@@ -11,8 +12,36 @@ export default async function VesselDetailsPage(props: {
 }) {
   const params = await props.params;
   
-  const { rows } = await pool.query('SELECT * FROM "Vessel" WHERE id = $1', [params.id]);
-  const vessel = rows[0] as Vessel;
+  let vessel: Vessel | null = null;
+  const dbActive = await isDbConnected();
+
+  if (dbActive) {
+    try {
+      const { rows } = await pool.query('SELECT * FROM "Vessel" WHERE id = $1', [params.id]);
+      vessel = rows[0] as Vessel;
+    } catch (err) {
+      console.error("DB detail fetch failed:", err);
+    }
+  }
+
+  // Fallback to scraper if no vessel found in DB
+  if (!vessel) {
+    const rawVessel = await getVesselById(params.id);
+    if (rawVessel) {
+      vessel = {
+        ...rawVessel,
+        id: String(rawVessel.id),
+        price: rawVessel.price || "Contact for Price",
+        location: rawVessel.location || "International",
+        image: rawVessel.image || "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800",
+        images: rawVessel.images || [],
+        status: "Active",
+        description: rawVessel.description || "No description available.",
+        type: "Vessel",
+      } as Vessel;
+    }
+  }
+
   if (!vessel) return notFound();
 
   const hasLocalImage = vessel.image?.startsWith("/vessels/eco/");
