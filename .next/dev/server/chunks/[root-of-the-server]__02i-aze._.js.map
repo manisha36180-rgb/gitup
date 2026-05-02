@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 42, "column": 0}, "map": {"version":3,"sources":["file:///D:/Marine%20Auction/antigravity-app/app/search/route.js"],"sourcesContent":["import { Pool } from \"pg\";\r\n\r\nconst pool = new Pool({\r\n  user: \"postgres\",\r\n  host: \"localhost\",\r\n  database: \"marine_db\",\r\n  password: \"Manisha36180\",\r\n  port: 5432,\r\n});\r\n\r\nexport async function GET(req) {\r\n  const { searchParams } = new URL(req.url);\r\n  const query = searchParams.get(\"q\");\r\n\r\n  const result = await pool.query(\r\n    \"SELECT * FROM search_vessels($1)\",\r\n    [query]\r\n  );\r\n\r\n  return Response.json(result.rows);\r\n}"],"names":["pool","user","host","database","password","port","GET","req","searchParams","URL","url","query","get","result","Response","json","rows"],"mappings":";;;;AAAA;;;;;;AAEA,MAAMA,OAAO,IAAI,2KAAI,CAAC;IACpBC,MAAM;IACNC,MAAM;IACNC,UAAU;IACVC,UAAU;IACVC,MAAM;AACR;AAEO,eAAeC,IAAIC,GAAG;IAC3B,MAAM,EAAEC,YAAY,EAAE,GAAG,IAAIC,IAAIF,IAAIG,GAAG;IACxC,MAAMC,QAAQH,aAAaI,GAAG,CAAC;IAE/B,MAAMC,SAAS,MAAMb,KAAKW,KAAK,CAC7B,oCACA;QAACA;KAAM;IAGT,OAAOG,SAASC,IAAI,CAACF,OAAOG,IAAI;AAClC"}}]
-}
