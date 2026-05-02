@@ -173,13 +173,14 @@ export default async function AuctionsPage({
         )}
       </div>
     );
-  } catch (err: any) {
+  } catch (err: unknown) {
+    const error = err instanceof Error ? err : new Error(String(err));
     return (
       <div style={{ padding: "100px 20px", textAlign: "center" }}>
         <h1 style={{ color: "red" }}>Error Loading Auctions</h1>
-        <p style={{ color: "#666" }}>{err.message}</p>
+        <p style={{ color: "#666" }}>{error.message}</p>
         <pre style={{ textAlign: "left", display: "inline-block", padding: "20px", background: "#f5f5f5", borderRadius: "8px", marginTop: "20px" }}>
-          {err.stack}
+          {error.stack}
         </pre>
       </div>
     );
