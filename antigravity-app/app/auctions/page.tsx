@@ -106,39 +106,6 @@ export default async function AuctionsPage({
             {vessels.length} vessel{vessels.length !== 1 ? "s" : ""} found
           </p>
           <div style={{ width: "64px", height: "4px", backgroundColor: "#0EA5E9", marginBottom: "2rem", borderRadius: "99px" }} />
-
-          {/* ── Search Bar ── */}
-          <div style={{ display: "flex", width: "100%", justifyContent: "center", marginTop: "0.5rem", marginBottom: "3rem" }}>
-            <form
-              action="/auctions"
-              method="GET"
-              className="flex w-full bg-white rounded-xl shadow-md overflow-hidden border border-gray-200 h-14"
-              style={{ maxWidth: "672px" }}
-              suppressHydrationWarning
-            >
-              <input
-                type="text"
-                name="query"
-                defaultValue={resolvedParams?.query || ""}
-                placeholder="Search by vessel name, type, or location..."
-                className="flex-grow px-5 text-gray-800 outline-none placeholder-gray-400 text-base"
-                suppressHydrationWarning
-              />
-              <button
-                type="submit"
-                className="bg-[#0EA5E9] hover:bg-blue-500 transition text-white font-bold px-8 text-base cursor-pointer"
-                suppressHydrationWarning
-              >
-                Search
-              </button>
-            </form>
-          </div>
-
-          {query && (
-            <a href="/auctions" className="inline-block mt-4 text-sm text-gray-400 hover:text-[#0EA5E9] transition">
-              ✕ Clear search
-            </a>
-          )}
         </div>
 
         {vessels.length === 0 ? (

@@ -158,12 +158,6 @@ export default async function VesselDetailsPage(props: {
         <p style={{ color: "#4a5568", lineHeight: 1.8, fontSize: "0.95rem", margin: 0 }}>{vessel.description}</p>
       </div>
 
-      {/* Back Button */}
-      <div style={{ textAlign: "center", marginTop: "40px" }}>
-        <Link href="/auctions" style={{ display: "inline-block", background: "#0f2846", color: "white", fontWeight: 700, padding: "12px 32px", borderRadius: "10px", textDecoration: "none" }}>
-          ← Back to Auctions
-        </Link>
-      </div>
     </div>
   );
 }
