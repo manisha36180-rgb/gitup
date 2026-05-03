@@ -124,7 +124,7 @@ export default function Home() {
       {/* ── CTA ── */}
       <section className="w-full bg-white" style={{ padding: "96px 24px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[640px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-          <h2 className="text-[2.5rem] font-extrabold text-[#0f2846] mt-4 mb-8" style={{ textAlign: "center", width: "100%" }}>
+          <h2 className="text-[2.5rem] font-extrabold text-[#0f2846] mb-8" style={{ textAlign: "center", width: "100%" }}>
             Ready to Find Your Vessel?
           </h2>
           <p className="text-[1.05rem] text-[#718096] leading-[1.7] mb-12" style={{ textAlign: "center", width: "100%" }}>
@@ -132,7 +132,7 @@ export default function Home() {
           </p>
           <Link 
             href="/auctions" 
-            className="inline-block bg-[#0EA5E9] text-white font-bold px-12 py-4 mb-4 rounded-xl text-[1.05rem] shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:bg-[#0284c7] transition-colors no-underline"
+            className="inline-block bg-[#0EA5E9] text-white font-bold px-12 py-4 rounded-xl text-[1.05rem] shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:bg-[#0284c7] transition-colors no-underline"
           >
             Browse Auctions &rarr;
           </Link>
