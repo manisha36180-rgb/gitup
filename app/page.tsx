@@ -63,14 +63,14 @@ export default function Home() {
       </section>
 
       {/* ── Why Choose Marine Auctions ── */}
-      <section className="w-full bg-gray-50 py-12 px-6 sm:py-20 lg:py-20">
-        <div className="max-w-[1000px] mx-auto flex flex-col items-center text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-[#0f2846] mb-10 lg:mb-12">
+      <section className="w-full bg-gray-50 py-12 px-6 sm:py-20 lg:py-[80px] text-center">
+        <div className="max-w-[960px] mx-auto">
+          <h2 className="text-2xl sm:text-3xl lg:text-[1.85rem] font-extrabold text-[#0f2846] mb-10 lg:mb-14">
             Why Choose Marine Auctions?
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full">
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6 w-full text-left">
+            <div className="bg-white p-6 sm:py-9 sm:px-7 rounded-2xl shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-slate-200 text-center">
               <div className="text-[#0EA5E9] mb-4">
                 <Ship size={40} />
               </div>
@@ -80,7 +80,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center">
+            <div className="bg-white p-6 sm:py-9 sm:px-7 rounded-2xl shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-slate-200 text-center">
               <div className="text-[#0EA5E9] mb-4">
                 <Search size={40} />
               </div>
@@ -90,7 +90,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center">
+            <div className="bg-white p-6 sm:py-9 sm:px-7 rounded-2xl shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-slate-200 text-center">
               <div className="text-[#0EA5E9] mb-4">
                 <FileText size={40} />
               </div>
@@ -100,7 +100,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center">
+            <div className="bg-white p-6 sm:py-9 sm:px-7 rounded-2xl shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-slate-200 text-center">
               <div className="text-[#0EA5E9] mb-4">
                 <Globe size={40} />
               </div>
@@ -110,7 +110,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center">
+            <div className="bg-white p-6 sm:py-9 sm:px-7 rounded-2xl shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-slate-200 text-center">
               <div className="text-[#0EA5E9] mb-4">
                 <Zap size={40} />
               </div>
@@ -120,7 +120,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col items-center">
+            <div className="bg-white p-6 sm:py-9 sm:px-7 rounded-2xl shadow-[0_1px_6px_rgba(0,0,0,0.06)] border border-slate-200 text-center">
               <div className="text-[#0EA5E9] mb-4">
                 <Lock size={40} />
               </div>
@@ -134,8 +134,8 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="w-full bg-white py-16 px-6 sm:py-20">
-        <div className="max-w-[600px] mx-auto flex flex-col items-center text-center">
+      <section className="w-full bg-white py-16 px-6 sm:py-[80px] text-center">
+        <div className="max-w-[600px] mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-[#0f2846] mb-4 lg:mb-4">
             Ready to Find Your Vessel?
           </h2>

@@ -1,18 +1,18 @@
 export default function ContactPage() {
   return (
-    <div className="w-full bg-[#f8f9fa] py-12 px-6 sm:py-20 lg:py-20 min-h-[80vh] flex flex-col items-center">
-      <div className="w-full max-w-[1280px] mx-auto flex flex-col items-center">
+    <div className="w-full bg-[#f8f9fa] py-[80px] px-[24px] min-h-[80vh] text-center">
+      <div className="w-full max-w-[800px] mx-auto">
         {/* Header Section */}
-        <div className="max-w-[800px] w-full flex flex-col items-center text-center mb-12 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-extrabold text-[#0f2846] mb-4 text-center">Contact Us</h1>
-          <div className="w-16 h-1 bg-[#0EA5E9] mb-8 rounded-full" />
-          <p className="text-[#4a5568] text-base sm:text-lg lg:text-[1.125rem] leading-relaxed max-w-[600px] text-center">
+        <div className="mb-[48px]">
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-extrabold text-[#0f2846] mb-4">Contact Us</h1>
+          <div className="w-16 h-1 bg-[#0EA5E9] mx-auto mb-8 rounded-full" />
+          <p className="text-[#4a5568] text-base sm:text-lg lg:text-[1.125rem] leading-relaxed max-w-[600px] mx-auto">
             Have a question about a listing or want to know more about our platform? Reach out and our team will get back to you shortly.
           </p>
         </div>
 
         {/* Main Container */}
-        <div className="w-full max-w-[700px]">
+        <div className="w-full max-w-[700px] mx-auto text-left">
 
           {/* Contact Form */}
           <form className="bg-white rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] border border-[#f1f5f9] p-6 sm:p-10 mb-12">
