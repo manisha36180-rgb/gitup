@@ -41,7 +41,7 @@ export default function Home() {
       </div>
 
       {/* ── Welcome / Overview ── */}
-      <section className="w-full bg-white py-24 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <section className="w-full bg-white" style={{ padding: "96px 24px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[780px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
           <h2 className="text-[2.5rem] font-extrabold text-[#0f2846] mt-4 mb-6" style={{ textAlign: "center", width: "100%" }}>
             Welcome to Marine Auctions
@@ -63,7 +63,7 @@ export default function Home() {
       </section>
 
       {/* ── Why Choose Marine Auctions ── */}
-      <section className="w-full bg-[#f8f9fa] py-24 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <section className="w-full bg-[#f8f9fa]" style={{ padding: "96px 24px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[960px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <h2 className="text-[2.5rem] font-extrabold text-[#0f2846] mt-4 mb-16" style={{ textAlign: "center", width: "100%" }}>
             Why Choose Marine Auctions?
@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="w-full bg-white py-24 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <section className="w-full bg-white" style={{ padding: "96px 24px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[640px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
           <h2 className="text-[2.5rem] font-extrabold text-[#0f2846] mt-4 mb-8" style={{ textAlign: "center", width: "100%" }}>
             Ready to Find Your Vessel?
