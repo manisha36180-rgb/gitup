@@ -26,14 +26,14 @@ export default function Home() {
             The premier platform for buying and selling luxury yachts, sailboats, and commercial marine craft.
           </p>
           
-          <form action="/auctions" className="w-full max-w-[600px] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-md lg:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
+          <form action="/auctions" className="w-full max-w-[500px] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-md lg:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
             <input 
               type="text" 
               name="query"
-              placeholder="Search by name, make, destination..."
-              className="flex-grow p-4 text-gray-800 outline-none border-none text-base w-full sm:w-auto"
+              placeholder="Search by name, make, or location..."
+              className="flex-grow py-3.5 px-5 text-gray-800 outline-none border-none text-base w-full sm:w-auto"
             />
-            <button type="submit" className="bg-[#0EA5E9] text-white px-8 py-4 font-semibold text-base w-full sm:w-auto hover:bg-[#0284c7] transition-colors">
+            <button type="submit" className="bg-[#0EA5E9] text-white px-7 py-3.5 font-semibold text-base w-full sm:w-auto hover:bg-[#0284c7] transition-colors">
               Search
             </button>
           </form>
