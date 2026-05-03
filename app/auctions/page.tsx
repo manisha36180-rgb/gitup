@@ -129,7 +129,7 @@ export default async function AuctionsPage({
       <div className="w-full flex flex-col items-center pt-12 pb-32">
         <div className="w-full max-w-[1280px] px-4 sm:px-6">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-16 lg:mb-20">
+        <div className="flex flex-col items-center text-center pb-12 lg:pb-16 mb-4">
           <h1 className="text-3xl sm:text-4xl font-bold text-[#0f2846] mb-3">
             {query ? `Results for "${resolvedParams?.query}"` : "Active Auctions"}
           </h1>
@@ -147,7 +147,7 @@ export default async function AuctionsPage({
             </Link>
           </div>
         ) : (
-          <div className="flex flex-wrap justify-center gap-8 px-4 sm:px-6">
+          <div className="flex flex-wrap justify-center gap-8 px-4 sm:px-6 pt-8 mt-8">
             {vessels.map((vessel: Vessel) => (
               <Link
                 key={vessel.id}
