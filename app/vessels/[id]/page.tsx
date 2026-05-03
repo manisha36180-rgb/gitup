@@ -78,7 +78,8 @@ export default async function VesselDetailsPage(props: {
   const hasLocalImage = vessel.image?.startsWith("/vessels/eco/");
 
   return (
-    <div className="w-full max-w-[800px] mx-auto px-6 py-10 lg:py-10">
+    <div style={{ width: "100%", display: "flex", flexDirection: "column", alignItems: "center", padding: "40px 0" }}>
+      <div style={{ width: "100%", maxWidth: "800px", padding: "0 24px", display: "flex", flexDirection: "column" }}>
 
       {/* Back */}
       <Link href="/auctions" className="text-[#0f2846] font-semibold no-underline text-[0.9rem]">
@@ -157,6 +158,7 @@ export default async function VesselDetailsPage(props: {
         <p className="text-[#4a5568] leading-relaxed text-[0.95rem] m-0">{vessel.description}</p>
       </div>
 
+      </div>
     </div>
   );
 }
