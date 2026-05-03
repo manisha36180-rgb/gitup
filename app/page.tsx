@@ -132,7 +132,7 @@ export default function Home() {
           </p>
           <Link 
             href="/auctions" 
-            className="inline-block bg-[#0EA5E9] text-white font-bold px-12 py-4 rounded text-[1.05rem] shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:bg-[#0284c7] transition-colors no-underline"
+            className="inline-block bg-[#0EA5E9] text-white font-bold px-16 py-6 rounded text-[1.1rem] shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:bg-[#0284c7] transition-colors no-underline"
           >
             Browse Auctions &rarr;
           </Link>
