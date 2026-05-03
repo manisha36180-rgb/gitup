@@ -31,7 +31,7 @@ export default function Home() {
               type="text" 
               name="query"
               placeholder="Search by name, make, or location..."
-              style={{ flex: 1, padding: "0 20px", fontSize: "0.95rem", border: "none", outline: "none", color: "#111827", backgroundColor: "#ffffff", caretColor: "#0EA5E9" }}
+              style={{ flex: 1, padding: "0 20px", fontSize: "0.95rem", border: "none", outline: "none", color: "#111827", backgroundColor: "#ffffff", caretColor: "#0EA5E9", textAlign: "center" }}
             />
             <button type="submit" style={{ background: "#0EA5E9", color: "white", fontWeight: 700, padding: "0 28px", border: "none", cursor: "pointer", fontSize: "0.95rem", whiteSpace: "nowrap" }}>
               Search
