@@ -43,10 +43,10 @@ export default function Home() {
       {/* ── Welcome / Overview ── */}
       <section className="w-full bg-white" style={{ padding: "96px 24px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[780px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-          <h2 className="text-[1.75rem] font-extrabold text-[#0f2846] mt-4 mb-6" style={{ textAlign: "center", width: "100%" }}>
+          <h2 className="text-[1.75rem] font-extrabold text-[#0f2846] mt-4" style={{ textAlign: "center", width: "100%", marginBottom: "24px" }}>
             Welcome to Marine Auctions
           </h2>
-          <div className="w-16 h-1 bg-[#0EA5E9] mb-12 rounded-full" style={{ margin: "0 auto" }} />
+          <div className="w-16 h-1 bg-[#0EA5E9] rounded-full" style={{ margin: "0 auto", marginBottom: "48px" }} />
           
           <div className="flex flex-col w-full gap-6" style={{ textAlign: "center", alignItems: "center" }}>
             <p className="text-[1.05rem] text-[#4a5568] leading-[1.85]" style={{ textAlign: "center", width: "100%" }}>
@@ -124,7 +124,7 @@ export default function Home() {
       {/* ── CTA ── */}
       <section className="w-full bg-white" style={{ padding: "96px 24px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[640px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-          <h2 className="text-[1.75rem] font-extrabold text-[#0f2846] mb-8" style={{ textAlign: "center", width: "100%" }}>
+          <h2 className="text-[1.75rem] font-extrabold text-[#0f2846]" style={{ textAlign: "center", width: "100%", marginBottom: "24px" }}>
             Ready to Find Your Vessel?
           </h2>
           <p className="text-[1.05rem] text-[#718096] leading-[1.7]" style={{ textAlign: "center", width: "100%", marginBottom: "24px" }}>
