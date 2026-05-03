@@ -78,7 +78,7 @@ export default async function VesselDetailsPage(props: {
   const hasLocalImage = vessel.image?.startsWith("/vessels/eco/");
 
   return (
-    <div className="w-full block py-10">
+    <div className="w-full block" style={{ padding: "64px 0 128px 0" }}>
       <div className="w-full max-w-[800px] px-6 block" style={{ margin: "0 auto" }}>
 
       {/* Back */}
