@@ -14,9 +14,8 @@ export default async function VesselDetailsPage(props: {
   
   let vessel: Vessel | null = null;
   const dbActive = await isDbConnected();
-  const isNumericId = /^\d+$/.test(params.id);
 
-  if (dbActive && isNumericId) {
+  if (dbActive) {
     try {
       const { rows } = await getPool().query('SELECT * FROM "Vessel" WHERE id = $1', [params.id]);
       vessel = rows[0] as Vessel;
@@ -101,9 +100,9 @@ export default async function VesselDetailsPage(props: {
       <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "32px" }}>
         <div style={{ position: "relative", width: "100%", height: "420px", borderRadius: "16px", overflow: "hidden", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}>
           {hasLocalImage ? (
-            <img src={vessel.images[0] || vessel.image} alt={vessel.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={(vessel.images && vessel.images[0]) || vessel.image} alt={vessel.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           ) : (
-            <Image src={vessel.images[0] || vessel.image || "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800"} alt={vessel.name} fill style={{ objectFit: "cover" }} unoptimized />
+            <Image src={(vessel.images && vessel.images[0]) || vessel.image || "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800"} alt={vessel.name} fill style={{ objectFit: "cover" }} unoptimized />
           )}
         </div>
         
