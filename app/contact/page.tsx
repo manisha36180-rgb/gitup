@@ -3,10 +3,10 @@ export default function ContactPage() {
     <div className="w-full bg-[#f8f9fa] py-12 px-6 sm:py-20 lg:py-20 min-h-[80vh] flex flex-col items-center">
       <div className="w-full max-w-[1280px] mx-auto flex flex-col items-center">
         {/* Header Section */}
-        <div className="max-w-[800px] text-center mb-12 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-extrabold text-[#0f2846] mb-4">Contact Us</h1>
-          <div className="w-16 h-1 bg-[#0EA5E9] mx-auto mb-8 rounded-full" />
-          <p className="text-[#4a5568] text-base sm:text-lg lg:text-[1.125rem] leading-relaxed max-w-[600px] mx-auto">
+        <div className="max-w-[800px] w-full flex flex-col items-center text-center mb-12 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] font-extrabold text-[#0f2846] mb-4 text-center">Contact Us</h1>
+          <div className="w-16 h-1 bg-[#0EA5E9] mb-8 rounded-full" />
+          <p className="text-[#4a5568] text-base sm:text-lg lg:text-[1.125rem] leading-relaxed max-w-[600px] text-center">
             Have a question about a listing or want to know more about our platform? Reach out and our team will get back to you shortly.
           </p>
         </div>
