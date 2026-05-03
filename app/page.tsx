@@ -41,9 +41,9 @@ export default function Home() {
       </div>
 
       {/* ── Welcome / Overview ── */}
-      <section className="w-full bg-white py-16 px-6 sm:py-20 lg:py-24 flex flex-col items-center text-center">
+      <section className="w-full bg-white py-12 px-6 sm:py-16 lg:py-20 flex flex-col items-center text-center">
         <div className="w-full max-w-[800px] flex flex-col items-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f2846] mb-4 lg:mb-6">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0f2846] mb-4 lg:mb-6">
             Welcome to Marine Auctions
           </h2>
           <div className="w-16 h-1 bg-[#0EA5E9] mb-10 sm:mb-12 lg:mb-16 rounded-full" />
@@ -63,9 +63,9 @@ export default function Home() {
       </section>
 
       {/* ── Why Choose Marine Auctions ── */}
-      <section className="w-full bg-[#f8fafc] py-16 sm:py-20 lg:py-28 px-6 flex flex-col items-center">
-        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f2846] mb-12 sm:mb-16 lg:mb-20 text-center">
+      <section className="w-full bg-[#f8fafc] py-12 sm:py-16 lg:py-20 px-6 flex flex-col items-center">
+        <div className="w-full max-w-5xl mx-auto flex flex-col items-center">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0f2846] mb-10 sm:mb-12 lg:mb-16 text-center">
             Why Choose Marine Auctions?
           </h2>
           
@@ -122,9 +122,9 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="w-full bg-white py-20 sm:py-32 px-6 flex flex-col items-center text-center">
+      <section className="w-full bg-white py-16 sm:py-24 px-6 flex flex-col items-center text-center">
         <div className="w-full max-w-[800px] flex flex-col items-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0f2846] mb-16 sm:mb-20 lg:mb-24">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0f2846] mb-8 sm:mb-12 lg:mb-16">
             Ready to Find Your Vessel?
           </h2>
           <p className="text-base sm:text-lg lg:text-[1.15rem] text-gray-500 lg:text-[#64748b] leading-relaxed lg:leading-[2] mb-16">
