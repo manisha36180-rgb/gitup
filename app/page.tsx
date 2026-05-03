@@ -46,7 +46,7 @@ export default function Home() {
           <h2 className="text-[2.25rem] font-extrabold text-[#0f2846] mb-4">
             Welcome to Marine Auctions
           </h2>
-          <div className="w-16 h-1 bg-[#0EA5E9] mb-10 rounded-full" />
+          <div className="w-16 h-1 bg-[#0EA5E9] mb-24 rounded-full" />
           
           <div className="flex flex-col text-center w-full">
             <p className="text-[1.05rem] text-[#4a5568] leading-[1.85] mb-5">
@@ -124,7 +124,7 @@ export default function Home() {
       {/* ── CTA ── */}
       <section className="w-full bg-white py-20 px-6 text-center flex flex-col items-center">
         <div className="w-full max-w-[640px] mx-auto flex flex-col items-center">
-          <h2 className="text-[2rem] font-extrabold text-[#0f2846] mb-4">
+          <h2 className="text-[2rem] font-extrabold text-[#0f2846] mb-16">
             Ready to Find Your Vessel?
           </h2>
           <p className="text-[1.05rem] text-[#718096] leading-[1.7] mb-9">
