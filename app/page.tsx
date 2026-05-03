@@ -69,7 +69,7 @@ export default function Home() {
             Why Choose Marine Auctions?
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full mb-20 sm:mb-28 lg:mb-40">
             <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center h-full justify-start border border-gray-100">
               <div className="text-4xl sm:text-5xl mb-6 drop-shadow-sm">🚢</div>
               <h3 className="text-[1.1rem] sm:text-[1.2rem] font-bold text-[#0f2846] mb-4">Curated Vessel Listings</h3>
