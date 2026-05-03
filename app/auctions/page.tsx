@@ -170,21 +170,21 @@ export default async function AuctionsPage({
                 </div>
 
                 {/* Content */}
-                <div className="p-6 sm:p-7 flex flex-col flex-grow">
+                <div className="p-6 sm:p-7 flex flex-col items-center text-center flex-grow">
                   <h2 className="text-lg sm:text-xl font-extrabold text-[#0f2846] mb-4 leading-tight line-clamp-2">
                     {vessel.name}
                   </h2>
 
-                  <div className="flex flex-col gap-2.5 text-[#64748b] text-sm mb-6 flex-grow">
-                    <div className="flex items-center gap-2.5">
+                  <div className="flex flex-col items-center gap-2.5 text-[#64748b] text-sm mb-6 flex-grow">
+                    <div className="flex items-center justify-center gap-2.5">
                       <span className="text-base">📍</span>
                       <span className="whitespace-nowrap overflow-hidden text-ellipsis">{vessel.location || "Location unavailable"}</span>
                     </div>
-                    <div className="flex items-center gap-2.5">
+                    <div className="flex items-center justify-center gap-2.5">
                       <span className="text-base">📅</span>
                       <span>{vessel.year || "Year unknown"}</span>
                     </div>
-                    <div className="flex items-center gap-2.5">
+                    <div className="flex items-center justify-center gap-2.5">
                       <span className="text-base">⛵</span>
                       <span className="whitespace-nowrap overflow-hidden text-ellipsis">{vessel.type || "Vessel"}</span>
                     </div>
