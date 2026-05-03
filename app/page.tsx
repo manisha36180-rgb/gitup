@@ -41,30 +41,32 @@ export default function Home() {
       </div>
 
       {/* ── Welcome / Overview ── */}
-      <section className="bg-white py-12 px-6 sm:py-20 lg:py-20 text-center">
-        <div className="max-w-[800px] mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-[#0f2846] mb-4 lg:mb-4">
-            Welcome to Marine Auctions
-          </h2>
-          <div className="w-16 h-1 bg-[#0EA5E9] mx-auto mb-8 lg:mb-10 rounded-full" />
-          
-          <div className="flex flex-col gap-6 lg:gap-6 text-center">
-            <p className="text-sm sm:text-base lg:text-[1.05rem] text-gray-600 lg:text-[#4a5568] leading-relaxed lg:lineHeight-[1.85]">
-              Marine Auctions is your premier global destination for discovering, bidding on, and acquiring luxury yachts, sport fishing vessels, and commercial crafts from highly professional operations. We aggregate listings directly from the world's most trusted marine auction houses and present them in a clean, professional interface supported by an unparalleled buying experience.
-            </p>
-            <p className="text-sm sm:text-base lg:text-[1.05rem] text-gray-600 lg:text-[#4a5568] leading-relaxed lg:lineHeight-[1.85]">
-              Every vessel on our platform is offered as a through a strict inspection and vetting process before it is presented. We partner with vetted, industry-leading marine auction houses to ensure that regardless of the vessel make or build, you receive a reliable partner before placing bids in any sail.
-            </p>
-            <p className="text-sm sm:text-base lg:text-[1.05rem] text-gray-600 lg:text-[#4a5568] leading-relaxed lg:lineHeight-[1.85]">
-              Whether you're searching for an exclusive cruiser or a commercial vessel to set sail, Marine Auctions provides a transparent, secure, and reliable browsing experience. Our mission is to connect serious buyers with authentic vessels, eliminating guesswork and putting the best of the marine market at your fingertips.
-            </p>
+      <section className="bg-white py-12 px-6 sm:py-20 lg:py-20 flex flex-col items-center">
+        <div className="w-full max-w-[1280px] mx-auto text-center">
+          <div className="max-w-[800px] mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-[#0f2846] mb-4 lg:mb-4">
+              Welcome to Marine Auctions
+            </h2>
+            <div className="w-16 h-1 bg-[#0EA5E9] mx-auto mb-8 lg:mb-10 rounded-full" />
+            
+            <div className="flex flex-col gap-6 lg:gap-6 text-center">
+              <p className="text-sm sm:text-base lg:text-[1.05rem] text-gray-600 lg:text-[#4a5568] leading-relaxed lg:leading-[1.85]">
+                Marine Auctions is your premier global destination for discovering, bidding on, and acquiring luxury yachts, sport fishing vessels, and commercial crafts from highly professional operations. We aggregate listings directly from the world's most trusted marine auction houses and present them in a clean, professional interface supported by an unparalleled buying experience.
+              </p>
+              <p className="text-sm sm:text-base lg:text-[1.05rem] text-gray-600 lg:text-[#4a5568] leading-relaxed lg:leading-[1.85]">
+                Every vessel on our platform is offered as a through a strict inspection and vetting process before it is presented. We partner with vetted, industry-leading marine auction houses to ensure that regardless of the vessel make or build, you receive a reliable partner before placing bids in any sail.
+              </p>
+              <p className="text-sm sm:text-base lg:text-[1.05rem] text-gray-600 lg:text-[#4a5568] leading-relaxed lg:leading-[1.85]">
+                Whether you're searching for an exclusive cruiser or a commercial vessel to set sail, Marine Auctions provides a transparent, secure, and reliable browsing experience. Our mission is to connect serious buyers with authentic vessels, eliminating guesswork and putting the best of the marine market at your fingertips.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Why Choose Marine Auctions ── */}
-      <section className="bg-gray-50 py-12 px-6 sm:py-20 lg:py-20 text-center">
-        <div className="max-w-[1000px] mx-auto">
+      <section className="bg-gray-50 py-12 px-6 sm:py-20 lg:py-20 flex flex-col items-center">
+        <div className="w-full max-w-[1000px] mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-[#0f2846] mb-10 lg:mb-12">
             Why Choose Marine Auctions?
           </h2>
@@ -134,20 +136,22 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-white py-16 px-6 sm:py-20 text-center">
-        <div className="max-w-[600px] mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-[#0f2846] mb-4 lg:mb-4">
-            Ready to Find Your Vessel?
-          </h2>
-          <p className="text-sm sm:text-base lg:text-[1.05rem] text-gray-600 lg:text-[#4a5568] leading-relaxed lg:lineHeight-[1.85] mb-8 lg:mb-8">
-            Browse live listings from top marine auction houses. Use our smart search to find your perfect vessel and place your bid today.
-          </p>
-          <Link 
-            href="/auctions" 
-            className="inline-block bg-[#0EA5E9] text-white font-semibold px-8 py-4 sm:px-10 rounded-lg text-lg lg:text-[1.1rem] shadow-md lg:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] hover:bg-[#0284c7] transition-colors no-underline"
-          >
-            Browse Auctions
-          </Link>
+      <section className="bg-white py-16 px-6 sm:py-20 flex flex-col items-center">
+        <div className="w-full max-w-[1280px] mx-auto text-center">
+          <div className="max-w-[600px] mx-auto">
+            <h2 className="text-2xl sm:text-3xl lg:text-[2.25rem] font-extrabold text-[#0f2846] mb-4 lg:mb-4">
+              Ready to Find Your Vessel?
+            </h2>
+            <p className="text-sm sm:text-base lg:text-[1.05rem] text-gray-600 lg:text-[#4a5568] leading-relaxed lg:leading-[1.85] mb-8 lg:mb-8">
+              Browse live listings from top marine auction houses. Use our smart search to find your perfect vessel and place your bid today.
+            </p>
+            <Link 
+              href="/auctions" 
+              className="inline-block bg-[#0EA5E9] text-white font-semibold px-8 py-4 sm:px-10 rounded-lg text-lg lg:text-[1.1rem] shadow-md lg:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] hover:bg-[#0284c7] transition-colors no-underline"
+            >
+              Browse Auctions
+            </Link>
+          </div>
         </div>
       </section>
 

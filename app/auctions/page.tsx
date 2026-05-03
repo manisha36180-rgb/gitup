@@ -146,12 +146,12 @@ export default async function AuctionsPage({
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-8 px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6">
             {vessels.map((vessel: Vessel) => (
               <Link
                 key={vessel.id}
                 href={`/vessels/${vessel.id}`}
-                className="auction-card flex flex-col w-full max-w-[380px] bg-white rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] overflow-hidden border border-[#f1f5f9] no-underline transition-all duration-200 mx-auto lg:mx-0"
+                className="auction-card flex flex-col w-full max-w-[380px] bg-white rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] overflow-hidden border border-[#f1f5f9] no-underline transition-all duration-200 mx-auto"
               >
                 {/* Image Container */}
                 <div className="relative w-full h-[220px] sm:h-[260px] overflow-hidden">
