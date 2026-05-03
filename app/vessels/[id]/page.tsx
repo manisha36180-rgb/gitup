@@ -86,14 +86,14 @@ export default async function VesselDetailsPage(props: {
       </Link>
 
       {/* Status + Title */}
-      <div className="text-center my-6 lg:my-6">
+      <div className="flex flex-col items-center text-center my-6 lg:my-6 w-full">
         <span className="bg-[#0EA5E9] text-white text-[0.8rem] font-bold py-1 px-3.5 rounded-full">
           {vessel.status}
         </span>
-        <h1 className="text-2xl sm:text-3xl lg:text-[2rem] font-extrabold text-[#0f2846] mt-3.5 lg:mt-3.5 mb-1 lg:mb-1 leading-tight">
+        <h1 className="text-2xl sm:text-3xl lg:text-[2rem] font-extrabold text-[#0f2846] mt-3.5 lg:mt-3.5 mb-1 lg:mb-1 leading-tight text-center">
           {vessel.name}
         </h1>
-        <p className="text-[#0EA5E9] font-bold text-xl sm:text-[1.25rem] m-0">{vessel.price}</p>
+        <p className="text-[#0EA5E9] font-bold text-xl sm:text-[1.25rem] m-0 text-center">{vessel.price}</p>
       </div>
 
       {/* Image Gallery */}
