@@ -71,48 +71,48 @@ export default function Home() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
             <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
-              <div className="text-[3rem] mb-4">🚢</div>
-              <h3 className="text-[1rem] font-bold text-[#0f2846] mb-[10px]">Curated Vessel Listings</h3>
+              <div className="text-[3rem]" style={{ marginBottom: "16px" }}>🚢</div>
+              <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Curated Vessel Listings</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
                 Listings are carefully scraped, cleaned, and categorised from leading marine auction houses.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
-              <div className="text-[3rem] mb-4">🔍</div>
-              <h3 className="text-[1rem] font-bold text-[#0f2846] mb-[10px]">Powerful Smart Search</h3>
+              <div className="text-[3rem]" style={{ marginBottom: "16px" }}>🔍</div>
+              <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Powerful Smart Search</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
                 Filter vessels instantly by name, location, or vessel type in real-time.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
-              <div className="text-[3rem] mb-4">📋</div>
-              <h3 className="text-[1rem] font-bold text-[#0f2846] mb-[10px]">Complete Vessel Profiles</h3>
+              <div className="text-[3rem]" style={{ marginBottom: "16px" }}>📋</div>
+              <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Complete Vessel Profiles</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
                 Year, hull type, location, auction status, and full description on every listing.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
-              <div className="text-[3rem] mb-4">🌏</div>
-              <h3 className="text-[1rem] font-bold text-[#0f2846] mb-[10px]">Global Coverage</h3>
+              <div className="text-[3rem]" style={{ marginBottom: "16px" }}>🌏</div>
+              <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Global Coverage</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
                 Vessels sourced from auction houses across Australia, Europe, and beyond.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
-              <div className="text-[3rem] mb-4">⚡</div>
-              <h3 className="text-[1rem] font-bold text-[#0f2846] mb-[10px]">Real-Time Updates</h3>
+              <div className="text-[3rem]" style={{ marginBottom: "16px" }}>⚡</div>
+              <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Real-Time Updates</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
                 Our platform fetches fresh vessel data automatically on every page load.
               </p>
             </div>
 
             <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
-              <div className="text-[3rem] mb-4">🔒</div>
-              <h3 className="text-[1rem] font-bold text-[#0f2846] mb-[10px]">Trusted & Transparent</h3>
+              <div className="text-[3rem]" style={{ marginBottom: "16px" }}>🔒</div>
+              <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Trusted & Transparent</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
                 Every listing shows its original auction details so you can bid with confidence.
               </p>
