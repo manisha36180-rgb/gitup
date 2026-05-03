@@ -190,9 +190,9 @@ export default async function AuctionsPage({
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between mt-auto pt-5 border-t border-[#f1f5f9]">
-                    <span className="text-[#0EA5E9] font-extrabold text-xl sm:text-[1.3rem]">{vessel.price}</span>
-                    <span className="text-[#0f2846] font-bold text-sm flex items-center gap-1">
+                  <div className="flex flex-col items-center justify-center gap-3 mt-auto pt-5 border-t border-[#f1f5f9] w-full">
+                    <span className="text-[#0EA5E9] font-extrabold text-xl sm:text-[1.3rem] text-center">{vessel.price}</span>
+                    <span className="text-[#0f2846] font-bold text-sm flex items-center justify-center gap-1 bg-[#f8fafc] hover:bg-[#e2e8f0] transition-colors px-6 py-2.5 rounded-full w-full max-w-[160px] text-center cursor-pointer">
                       Details <span>→</span>
                     </span>
                   </div>
