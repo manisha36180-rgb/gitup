@@ -127,12 +127,12 @@ export default function Home() {
           <h2 className="text-[1.75rem] font-extrabold text-[#0f2846] mb-8" style={{ textAlign: "center", width: "100%" }}>
             Ready to Find Your Vessel?
           </h2>
-          <p className="text-[1.05rem] text-[#718096] leading-[1.7] mb-12" style={{ textAlign: "center", width: "100%" }}>
+          <p className="text-[1.05rem] text-[#718096] leading-[1.7]" style={{ textAlign: "center", width: "100%", marginBottom: "24px" }}>
             Browse live listings from top marine auction houses. Use our smart search to find your perfect vessel and place your bid today.
           </p>
           <Link 
             href="/auctions" 
-            className="inline-block bg-[#0EA5E9] text-white font-bold rounded text-[1.1rem] shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:bg-[#0284c7] transition-colors no-underline"
+            className="inline-block bg-[#0EA5E9] text-white font-bold rounded text-[1rem] shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:bg-[#0284c7] transition-colors no-underline"
             style={{ padding: "16px 32px" }}
           >
             Browse Auctions &rarr;
