@@ -319,9 +319,9 @@ const ECO_VESSELS: RawVessel[] = [
     "name": "2023 Offshore Support Vessel",
     "price": "Register to Bid",
     "location": "Location upon request",
-    "image": "https://images.unsplash.com/photo-1559523182-a284c3fb7cff?w=800",
+    "image": "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800",
     "images": [
-      "https://images.unsplash.com/photo-1559523182-a284c3fb7cff?w=800"
+      "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800"
     ],
     "source": "Maritime Auction Eco",
     "detailUrl": "https://maritimeauction.eco/auksjon/41630",
