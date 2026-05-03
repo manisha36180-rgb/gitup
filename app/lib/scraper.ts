@@ -419,6 +419,7 @@ export async function scrapeVessels(): Promise<RawVessel[]> {
   // ── SITE 2: Marine Auctions AU — listing page only ─────────────
   try {
     const paths = ["/forthcoming-auctions/", "/boats-for-sale/"];
+    let auItemsCount = 0;
 
     for (const p of paths) {
       try {
@@ -440,7 +441,7 @@ export async function scrapeVessels(): Promise<RawVessel[]> {
           const detailUrl = href.startsWith("http") ? href : href ? `https://www.marineauctions.com.au${href}` : "";
 
           results.push({
-            id: `au_${results.length}`,
+            id: `au_${auItemsCount}`,
             name,
             location: "Australia",
             image: listImage,
@@ -450,6 +451,7 @@ export async function scrapeVessels(): Promise<RawVessel[]> {
             description: "View full details on the auction page.",
             price: "Register to Bid",
           });
+          auItemsCount++;
         });
       } catch (err) {
         console.error(`Failed to scrape ${p}:`, err);
