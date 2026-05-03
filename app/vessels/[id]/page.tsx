@@ -87,7 +87,7 @@ export default async function VesselDetailsPage(props: {
       </Link>
 
       {/* Status + Title */}
-      <div className="flex flex-col items-center text-center my-6 lg:my-6 w-full">
+      <div className="flex flex-col items-center text-center w-full" style={{ margin: "32px 0" }}>
         <span className="bg-[#0EA5E9] text-white text-[0.8rem] font-bold py-1 px-3.5 rounded-full">
           {vessel.status}
         </span>
@@ -98,7 +98,7 @@ export default async function VesselDetailsPage(props: {
       </div>
 
       {/* Image Gallery */}
-      <div className="flex flex-col gap-3 mb-8">
+      <div className="flex flex-col gap-3" style={{ marginBottom: "40px" }}>
         <div className="relative w-full h-[300px] sm:h-[420px] rounded-2xl overflow-hidden shadow-lg lg:shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
           {hasLocalImage ? (
             <img src={(vessel.images && vessel.images[0]) || vessel.image} alt={vessel.name} className="w-full h-full object-cover" />
@@ -123,7 +123,7 @@ export default async function VesselDetailsPage(props: {
       </div>
 
       {/* Details Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 mb-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3" style={{ marginBottom: "36px" }}>
         {[
           { icon: "📍", label: "Location", value: vessel.location || "—" },
           { icon: "📅", label: "Year",     value: vessel.year    || "N/A" },
@@ -146,14 +146,14 @@ export default async function VesselDetailsPage(props: {
 
       {/* Auction Info */}
       {vessel.auctionInfo && (
-        <div className="bg-[#eff6ff] border border-[#bfdbfe] rounded-xl p-4 sm:p-5 mb-6">
+        <div className="bg-[#eff6ff] border border-[#bfdbfe] rounded-xl p-4 sm:p-5" style={{ marginBottom: "32px" }}>
           <div className="font-bold text-[#1d4ed8] mb-1 text-[0.85rem]">📢 AUCTION DETAILS</div>
           <div className="text-[#1e3a5f] text-[0.9rem]">{vessel.auctionInfo}</div>
         </div>
       )}
 
       {/* Description */}
-      <div className="bg-white border border-[#e2e8f0] rounded-2xl p-7 mb-6">
+      <div className="bg-white border border-[#e2e8f0] rounded-2xl p-7" style={{ marginBottom: "32px" }}>
         <h2 className="text-xl font-extrabold text-[#0f2846] mb-3">About This Vessel</h2>
         <p className="text-[#4a5568] leading-relaxed text-[0.95rem] m-0">{vessel.description}</p>
       </div>
