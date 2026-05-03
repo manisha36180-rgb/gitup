@@ -16,16 +16,13 @@ export default function RootLayout({
       <body suppressHydrationWarning style={{ background: "#f8f9fa", color: "#1a202c", display: "flex", flexDirection: "column", minHeight: "100vh", fontFamily: "Inter, system-ui, sans-serif" }}>
 
         {/* NAVBAR */}
-        <nav 
-          className="flex flex-col sm:flex-row gap-4 sm:gap-0 px-6 sm:px-10 py-4 sm:py-4"
-          style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 40px", background: "#0f2846", color: "white", position: "sticky", top: 0, zIndex: 50, boxShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
-        >
+        <nav style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 40px", background: "#0f2846", color: "white", position: "sticky", top: 0, zIndex: 50, boxShadow: "0 2px 10px rgba(0,0,0,0.3)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
             <span style={{ fontSize: "1.5rem" }}>⚓</span>
             <span style={{ fontWeight: 800, fontSize: "1.2rem", color: "white" }}>Marine</span>
             <span style={{ fontWeight: 800, fontSize: "1.2rem", color: "#0EA5E9" }}>Auctions</span>
           </div>
-          <div className="flex gap-6 sm:gap-8 text-sm sm:text-base" style={{ display: "flex", gap: "32px", fontSize: "0.95rem" }}>
+          <div style={{ display: "flex", gap: "32px", fontSize: "0.95rem" }}>
             <Link href="/" className="nav-link">Home</Link>
             <Link href="/auctions" className="nav-link">Auctions</Link>
             <Link href="/contact" className="nav-link">Contact</Link>
@@ -37,7 +34,7 @@ export default function RootLayout({
 
         {/* FOOTER */}
         <footer style={{ background: "#0f2846", color: "white", textAlign: "center" }}>
-          <div className="px-6 py-12 sm:px-6 sm:py-12" style={{ maxWidth: "500px", margin: "0 auto", padding: "48px 24px 32px" }}>
+          <div style={{ maxWidth: "500px", margin: "0 auto", padding: "48px 24px 32px" }}>
             <div style={{ fontSize: "2rem", marginBottom: "8px" }}>⚓</div>
             <h4 style={{ fontSize: "1.3rem", fontWeight: 800, color: "white", marginBottom: "8px" }}>Get In Touch</h4>
             <p style={{ color: "#93c5fd", fontSize: "0.875rem", marginBottom: "24px" }}>
@@ -49,7 +46,7 @@ export default function RootLayout({
               <span>📍 Delhi, India</span>
             </div>
           </div>
-          <div className="p-4 text-xs sm:text-sm" style={{ borderTop: "1px solid #1e3a5f", padding: "14px", color: "#60a5fa", fontSize: "0.8rem" }}>
+          <div style={{ borderTop: "1px solid #1e3a5f", padding: "14px", color: "#60a5fa", fontSize: "0.8rem" }}>
             © {new Date().getFullYear()} Marine Auctions. All Rights Reserved.
           </div>
         </footer>

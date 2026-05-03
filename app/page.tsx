@@ -18,22 +18,22 @@ export default function Home() {
           backgroundPosition: "center",
         }}
       >
-        <div className="max-w-[800px] px-6 mx-auto flex flex-col items-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold leading-tight lg:leading-[1.2] mb-4 lg:mb-[1.25rem] drop-shadow-md lg:drop-shadow-[0_2px_12px_rgba(0,0,0,0.4)]">
+        <div style={{ maxWidth: "720px", padding: "0 24px", margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h1 style={{ fontSize: "3.5rem", fontWeight: 800, lineHeight: 1.2, marginBottom: "1.25rem", textShadow: "0 2px 12px rgba(0,0,0,0.4)" }}>
             Find Your Dream Vessel
           </h1>
-          <p className="text-base sm:text-lg lg:text-[1.15rem] text-blue-100 lg:text-[#dbeafe] mb-8 lg:mb-8 max-w-[600px] leading-relaxed lg:leading-[1.7]">
+          <p style={{ fontSize: "1.15rem", color: "#dbeafe", marginBottom: "2.5rem", maxWidth: "500px", lineHeight: 1.7 }}>
             The premier platform for buying and selling luxury yachts, sailboats, and commercial marine craft.
           </p>
           
-          <form action="/auctions" className="w-full max-w-[500px] flex flex-col sm:flex-row bg-white rounded-lg overflow-hidden shadow-md lg:shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1),0_2px_4px_-1px_rgba(0,0,0,0.06)]">
+          <form style={{ display: "flex", width: "100%", maxWidth: "560px", borderRadius: "10px", overflow: "hidden", boxShadow: "0 8px 30px rgba(0,0,0,0.4)", height: "52px", backgroundColor: "#ffffff" }} action="/auctions">
             <input 
               type="text" 
               name="query"
               placeholder="Search by name, make, or location..."
-              className="flex-grow py-3.5 px-5 text-gray-800 outline-none border-none text-base w-full sm:w-auto"
+              style={{ flex: 1, padding: "0 20px", fontSize: "0.95rem", border: "none", outline: "none", color: "#111827", backgroundColor: "#ffffff", caretColor: "#0EA5E9" }}
             />
-            <button type="submit" className="bg-[#0EA5E9] text-white px-7 py-3.5 font-semibold text-base w-full sm:w-auto hover:bg-[#0284c7] transition-colors">
+            <button type="submit" style={{ background: "#0EA5E9", color: "white", fontWeight: 700, padding: "0 28px", border: "none", cursor: "pointer", fontSize: "0.95rem", whiteSpace: "nowrap" }}>
               Search
             </button>
           </form>
