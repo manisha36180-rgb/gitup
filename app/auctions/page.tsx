@@ -126,73 +126,72 @@ export default async function AuctionsPage({
     }
 
     return (
-      <div className="px-6" style={{ maxWidth: "1280px", margin: "0 auto", width: "100%", paddingTop: "48px", paddingBottom: "120px" }}>
+      <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 pt-12 pb-32">
         {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: "5rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h1 className="text-4xl font-bold text-[#0f2846] mb-3">
+        <div className="flex flex-col items-center text-center mb-16">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#0f2846] mb-3">
             {query ? `Results for "${resolvedParams?.query}"` : "Active Auctions"}
           </h1>
           <p className="text-gray-500 text-lg mb-6">
             {vessels.length} vessel{vessels.length !== 1 ? "s" : ""} found
           </p>
-          <div style={{ width: "64px", height: "4px", backgroundColor: "#0EA5E9", marginBottom: "2rem", borderRadius: "99px" }} />
+          <div className="w-16 h-1 bg-[#0EA5E9] rounded-full mb-8" />
         </div>
 
         {vessels.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-gray-500 text-xl">No vessels found matching your search.</p>
+          <div className="text-center py-20 px-4">
+            <p className="text-gray-500 text-lg md:text-xl">No vessels found matching your search.</p>
             <Link href="/auctions" className="mt-6 inline-block text-[#0EA5E9] font-semibold hover:underline">
               Clear search
             </Link>
           </div>
         ) : (
-          <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "32px", padding: "0 16px" }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {vessels.map((vessel: Vessel) => (
               <Link
                 key={vessel.id}
                 href={`/vessels/${vessel.id}`}
-                className="auction-card"
-                style={{ display: "flex", flexDirection: "column", width: "100%", maxWidth: "380px", backgroundColor: "white", borderRadius: "24px", boxShadow: "0 10px 30px rgba(0,0,0,0.06)", overflow: "hidden", border: "1px solid #f1f5f9", transition: "transform 0.2s, box-shadow 0.2s", textDecoration: "none" }}
+                className="auction-card flex flex-col w-full max-w-[380px] bg-white rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] overflow-hidden border border-slate-100 no-underline transition-all duration-200"
               >
                 {/* Image Container */}
-                <div style={{ position: "relative", width: "100%", height: "260px", overflow: "hidden" }}>
+                <div className="relative w-full h-[240px] sm:h-[260px] overflow-hidden">
                   <Image
                     src={vessel.image || "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800"}
                     alt={vessel.name || "Vessel"}
                     fill
-                    style={{ objectFit: "cover", transition: "transform 0.7s" }}
+                    className="object-cover transition-transform duration-700"
                     unoptimized
                   />
                   {/* Status Badge */}
-                  <div style={{ position: "absolute", top: "16px", right: "16px", backgroundColor: "#0EA5E9", color: "white", fontSize: "0.75rem", fontWeight: 800, padding: "6px 14px", borderRadius: "99px", textTransform: "uppercase", letterSpacing: "0.5px", boxShadow: "0 4px 12px rgba(0,0,0,0.2)" }}>
+                  <div className="absolute top-4 right-4 bg-[#0EA5E9] text-white text-xs font-extrabold py-1.5 px-3.5 rounded-full uppercase tracking-wide shadow-md">
                     {vessel.status}
                   </div>
                 </div>
 
                 {/* Content */}
-                <div style={{ padding: "28px", display: "flex", flexDirection: "column", flexGrow: 1 }}>
-                  <h2 style={{ fontSize: "1.25rem", fontWeight: 800, color: "#0f2846", marginBottom: "16px", lineHeight: 1.4, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                <div className="p-6 md:p-7 flex flex-col flex-grow">
+                  <h2 className="text-lg md:text-xl font-extrabold text-[#0f2846] mb-4 leading-snug line-clamp-2">
                     {vessel.name}
                   </h2>
 
-                  <div style={{ display: "flex", flexDirection: "column", gap: "10px", color: "#64748b", fontSize: "0.9rem", marginBottom: "24px", flexGrow: 1 }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                      <span style={{ fontSize: "1.1rem" }}>📍</span>
-                      <span style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{vessel.location || "Location unavailable"}</span>
+                  <div className="flex flex-col gap-2.5 text-slate-500 text-sm mb-6 flex-grow">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-base">📍</span>
+                      <span className="whitespace-nowrap overflow-hidden text-ellipsis">{vessel.location || "Location unavailable"}</span>
                     </div>
-                    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                      <span style={{ fontSize: "1.1rem" }}>📅</span>
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-base">📅</span>
                       <span>{vessel.year || "Year unknown"}</span>
                     </div>
-                    <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                      <span style={{ fontSize: "1.1rem" }}>⛵</span>
-                      <span>{vessel.type || "Vessel"}</span>
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-base">⛵</span>
+                      <span className="whitespace-nowrap overflow-hidden text-ellipsis">{vessel.type || "Vessel"}</span>
                     </div>
                   </div>
 
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "auto", paddingTop: "20px", borderTop: "1px solid #f1f5f9" }}>
-                    <span style={{ color: "#0EA5E9", fontWeight: 800, fontSize: "1.3rem" }}>{vessel.price}</span>
-                    <span style={{ color: "#0f2846", fontWeight: 700, fontSize: "0.9rem", display: "flex", alignItems: "center", gap: "4px" }}>
+                  <div className="flex items-center justify-between mt-auto pt-5 border-t border-slate-100">
+                    <span className="text-[#0EA5E9] font-extrabold text-xl md:text-2xl">{vessel.price}</span>
+                    <span className="text-[#0f2846] font-bold text-sm flex items-center gap-1">
                       Details <span>→</span>
                     </span>
                   </div>
@@ -206,10 +205,10 @@ export default async function AuctionsPage({
   } catch (err: unknown) {
     const error = err instanceof Error ? err : new Error(String(err));
     return (
-      <div style={{ padding: "100px 20px", textAlign: "center" }}>
-        <h1 style={{ color: "red" }}>Error Loading Auctions</h1>
-        <p style={{ color: "#666" }}>{error.message}</p>
-        <pre style={{ textAlign: "left", display: "inline-block", padding: "20px", background: "#f5f5f5", borderRadius: "8px", marginTop: "20px" }}>
+      <div className="py-24 px-6 text-center max-w-4xl mx-auto">
+        <h1 className="text-red-500 text-2xl md:text-3xl font-bold mb-4">Error Loading Auctions</h1>
+        <p className="text-gray-600 mb-6">{error.message}</p>
+        <pre className="text-left inline-block p-6 bg-gray-100 rounded-lg overflow-x-auto w-full text-sm">
           {error.stack}
         </pre>
       </div>

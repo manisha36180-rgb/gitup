@@ -78,42 +78,42 @@ export default async function VesselDetailsPage(props: {
   const hasLocalImage = vessel.image?.startsWith("/vessels/eco/");
 
   return (
-    <div style={{ maxWidth: "800px", margin: "0 auto", padding: "40px 24px", fontFamily: "Inter, system-ui, sans-serif" }}>
+    <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10 font-sans">
 
       {/* Back */}
-      <Link href="/auctions" style={{ color: "#0f2846", fontWeight: 600, textDecoration: "none", fontSize: "0.9rem" }}>
+      <Link href="/auctions" className="text-[#0f2846] font-semibold text-sm hover:underline flex items-center mb-6">
         ← Back to Auctions
       </Link>
 
       {/* Status + Title */}
-      <div style={{ textAlign: "center", margin: "24px 0 20px" }}>
-        <span style={{ background: "#0EA5E9", color: "white", fontSize: "0.8rem", fontWeight: 700, padding: "4px 14px", borderRadius: "99px" }}>
+      <div className="text-center my-6">
+        <span className="bg-[#0EA5E9] text-white text-xs font-bold py-1 px-3.5 rounded-full inline-block mb-3">
           {vessel.status}
         </span>
-        <h1 style={{ fontSize: "2rem", fontWeight: 800, color: "#0f2846", margin: "14px 0 4px", lineHeight: 1.3 }}>
+        <h1 className="text-2xl md:text-3xl font-extrabold text-[#0f2846] mt-2 mb-2 leading-tight">
           {vessel.name}
         </h1>
-        <p style={{ color: "#0EA5E9", fontWeight: 700, fontSize: "1.25rem", margin: 0 }}>{vessel.price}</p>
+        <p className="text-[#0EA5E9] font-bold text-xl m-0">{vessel.price}</p>
       </div>
 
       {/* Image Gallery */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "32px" }}>
-        <div style={{ position: "relative", width: "100%", height: "420px", borderRadius: "16px", overflow: "hidden", boxShadow: "0 8px 32px rgba(0,0,0,0.12)" }}>
+      <div className="flex flex-col gap-3 mb-8">
+        <div className="relative w-full h-[300px] sm:h-[420px] rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
           {hasLocalImage ? (
-            <img src={(vessel.images && vessel.images[0]) || vessel.image} alt={vessel.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={(vessel.images && vessel.images[0]) || vessel.image} alt={vessel.name} className="w-full h-full object-cover" />
           ) : (
-            <Image src={(vessel.images && vessel.images[0]) || vessel.image || "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800"} alt={vessel.name} fill style={{ objectFit: "cover" }} unoptimized />
+            <Image src={(vessel.images && vessel.images[0]) || vessel.image || "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800"} alt={vessel.name} fill className="object-cover" unoptimized />
           )}
         </div>
         
         {vessel.images && vessel.images.length > 1 && (
-          <div style={{ display: "flex", gap: "12px", overflowX: "auto", paddingBottom: "8px" }}>
+          <div className="flex gap-3 overflow-x-auto pb-2 snap-x">
             {vessel.images.slice(1).map((img, idx) => (
-              <div key={idx} style={{ position: "relative", minWidth: "120px", height: "80px", borderRadius: "8px", overflow: "hidden", flexShrink: 0 }}>
+              <div key={idx} className="relative min-w-[100px] sm:min-w-[120px] h-[70px] sm:h-[80px] rounded-lg overflow-hidden flex-shrink-0 snap-start">
                 {hasLocalImage ? (
-                  <img src={img} alt={`${vessel.name} thumbnail`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                  <img src={img} alt={`${vessel.name} thumbnail`} className="w-full h-full object-cover" />
                 ) : (
-                  <Image src={img} alt={`${vessel.name} thumbnail`} fill style={{ objectFit: "cover" }} unoptimized />
+                  <Image src={img} alt={`${vessel.name} thumbnail`} fill className="object-cover" unoptimized />
                 )}
               </div>
             ))}
@@ -122,7 +122,7 @@ export default async function VesselDetailsPage(props: {
       </div>
 
       {/* Details Grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "12px", marginBottom: "28px" }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-7">
         {[
           { icon: "📍", label: "Location", value: vessel.location || "—" },
           { icon: "📅", label: "Year",     value: vessel.year    || "N/A" },
@@ -133,11 +133,11 @@ export default async function VesselDetailsPage(props: {
           { icon: "⚙️", label: "Engine",   value: vessel.engine  },
           { icon: "🌐", label: "Source",   value: vessel.source  || "—" },
         ].filter(item => item.value).map(item => (
-          <div key={item.label} style={{ background: "#f8f9fa", border: "1px solid #e2e8f0", borderRadius: "12px", padding: "16px 20px", display: "flex", alignItems: "center", gap: "12px" }}>
-            <span style={{ fontSize: "1.5rem" }}>{item.icon}</span>
-            <div>
-              <div style={{ fontSize: "0.7rem", color: "#94a3b8", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: 600 }}>{item.label}</div>
-              <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0f2846" }}>{item.value}</div>
+          <div key={item.label} className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-center gap-3">
+            <span className="text-2xl">{item.icon}</span>
+            <div className="overflow-hidden">
+              <div className="text-[0.7rem] text-slate-400 uppercase tracking-wider font-semibold">{item.label}</div>
+              <div className="text-[0.95rem] font-bold text-[#0f2846] whitespace-nowrap overflow-hidden text-ellipsis">{item.value}</div>
             </div>
           </div>
         ))}
@@ -145,16 +145,16 @@ export default async function VesselDetailsPage(props: {
 
       {/* Auction Info */}
       {vessel.auctionInfo && (
-        <div style={{ background: "#eff6ff", border: "1px solid #bfdbfe", borderRadius: "12px", padding: "16px 20px", marginBottom: "24px" }}>
-          <div style={{ fontWeight: 700, color: "#1d4ed8", marginBottom: "4px", fontSize: "0.85rem" }}>📢 AUCTION DETAILS</div>
-          <div style={{ color: "#1e3a5f", fontSize: "0.9rem" }}>{vessel.auctionInfo}</div>
+        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-5 mb-6">
+          <div className="font-bold text-blue-700 mb-1 text-sm">📢 AUCTION DETAILS</div>
+          <div className="text-blue-900 text-sm md:text-base leading-relaxed">{vessel.auctionInfo}</div>
         </div>
       )}
 
       {/* Description */}
-      <div style={{ background: "white", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "28px", marginBottom: "24px" }}>
-        <h2 style={{ fontSize: "1.2rem", fontWeight: 800, color: "#0f2846", marginBottom: "12px" }}>About This Vessel</h2>
-        <p style={{ color: "#4a5568", lineHeight: 1.8, fontSize: "0.95rem", margin: 0 }}>{vessel.description}</p>
+      <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 mb-6">
+        <h2 className="text-xl font-extrabold text-[#0f2846] mb-3">About This Vessel</h2>
+        <p className="text-slate-600 leading-relaxed text-sm sm:text-base m-0 whitespace-pre-line">{vessel.description}</p>
       </div>
 
     </div>
