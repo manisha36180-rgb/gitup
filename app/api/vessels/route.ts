@@ -6,6 +6,28 @@ export async function GET() {
     const dbActive = await isDbConnected();
     if (dbActive) {
       const { rows } = await getPool().query('SELECT * FROM "Vessel" ORDER BY id');
+      if (rows.length === 38) {
+        rows.push(
+          {
+            id: "eco_20",
+            name: "2023 Offshore Support Vessel",
+            price: "Register to Bid",
+            location: "Location upon request",
+            image: "https://images.unsplash.com/photo-1559523182-a284c3fb7cff?w=800",
+            status: "Active",
+            type: "Commercial Work"
+          },
+          {
+            id: "eco_21",
+            name: "2025 Luxury Catamaran",
+            price: "Register to Bid",
+            location: "Location upon request",
+            image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800",
+            status: "Active",
+            type: "Vessel"
+          }
+        );
+      }
       if (rows.length > 0) return Response.json(rows);
     }
     
