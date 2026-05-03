@@ -30,7 +30,11 @@ export default function RootLayout({
         </nav>
 
         {/* PAGE CONTENT */}
-        <main style={{ flex: 1 }}>{children}</main>
+        <main style={{ flex: 1, width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <div style={{ width: "100%" }}>
+            {children}
+          </div>
+        </main>
 
         {/* FOOTER */}
         <footer style={{ background: "#0f2846", color: "white", textAlign: "center" }}>
