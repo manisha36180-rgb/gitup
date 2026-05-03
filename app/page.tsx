@@ -65,7 +65,7 @@ export default function Home() {
       {/* ── Why Choose Marine Auctions ── */}
       <section className="w-full bg-[#f8f9fa]" style={{ padding: "96px 24px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[960px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h2 className="text-[1.75rem] font-extrabold text-[#0f2846] mt-4 mb-16" style={{ textAlign: "center", width: "100%" }}>
+          <h2 className="text-[1.75rem] font-extrabold text-[#0f2846] mt-4" style={{ textAlign: "center", width: "100%", marginBottom: "64px" }}>
             Why Choose Marine Auctions?
           </h2>
           
