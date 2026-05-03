@@ -1,53 +1,57 @@
 export default function ContactPage() {
   return (
-    <div className="w-full bg-[#f8f9fa] py-20 sm:py-32 px-6 min-h-[80vh] flex flex-col items-center text-center">
-      <div className="w-full max-w-[800px] flex flex-col items-center">
+    <div className="w-full bg-[#f8f9fa] px-6 min-h-[80vh] flex flex-col items-center text-center" style={{ paddingTop: "8rem", paddingBottom: "8rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div className="w-full" style={{ maxWidth: "800px", display: "flex", flexDirection: "column", alignItems: "center" }}>
         {/* Header Section */}
-        <div className="mb-16 sm:mb-20 w-full flex flex-col items-center">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0f2846] mb-6">Contact Us</h1>
-          <div className="w-20 h-1.5 bg-[#0EA5E9] mb-10 rounded-full" />
-          <p className="text-[#4a5568] text-base sm:text-lg lg:text-[1.125rem] leading-relaxed w-full max-w-[650px]">
+        <div className="w-full flex flex-col items-center" style={{ marginBottom: "5rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <h1 className="font-extrabold text-[#0f2846]" style={{ fontSize: "2.5rem", marginBottom: "1.5rem" }}>Contact Us</h1>
+          <div className="bg-[#0EA5E9] rounded-full" style={{ width: "5rem", height: "0.4rem", marginBottom: "2.5rem" }} />
+          <p className="text-[#4a5568] leading-relaxed w-full" style={{ fontSize: "1.125rem", maxWidth: "650px", textAlign: "center" }}>
             Have a question about a listing or want to know more about our platform? Reach out and our team will get back to you shortly.
           </p>
         </div>
 
         {/* Main Container */}
-        <div className="w-full max-w-[700px] flex flex-col items-center">
+        <div className="w-full flex flex-col items-center" style={{ maxWidth: "700px" }}>
 
           {/* Contact Form */}
-          <form className="w-full bg-white rounded-[2rem] shadow-xl border border-slate-100 py-16 px-8 sm:px-16 mb-24">
-            <div className="flex flex-col items-center w-full gap-10">
+          <form className="w-full bg-white shadow-xl border border-slate-100" style={{ borderRadius: "2rem", padding: "4rem 2rem", marginBottom: "6rem" }}>
+            <div className="flex flex-col items-center w-full" style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}>
 
-              <div className="flex flex-col w-full items-center gap-4">
-                <label className="text-[0.875rem] font-extrabold text-[#0f2846] uppercase tracking-wider text-center">Full Name</label>
+              <div className="flex flex-col w-full items-center" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <label className="font-extrabold text-[#0f2846] uppercase tracking-wider text-center" style={{ fontSize: "0.875rem" }}>Full Name</label>
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="w-full border-2 border-[#e2e8f0] bg-[#f8fafc] rounded-xl py-5 px-6 outline-none text-[#1e293b] text-base transition-colors focus:border-[#0EA5E9] text-center"
+                  className="w-full border-2 border-[#e2e8f0] bg-[#f8fafc] outline-none text-[#1e293b] transition-colors focus:border-[#0EA5E9] text-center"
+                  style={{ borderRadius: "0.75rem", padding: "1.25rem 1.5rem", fontSize: "1rem" }}
                 />
               </div>
 
-              <div className="flex flex-col w-full items-center gap-4">
-                <label className="text-[0.875rem] font-extrabold text-[#0f2846] uppercase tracking-wider text-center">Email Address</label>
+              <div className="flex flex-col w-full items-center" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <label className="font-extrabold text-[#0f2846] uppercase tracking-wider text-center" style={{ fontSize: "0.875rem" }}>Email Address</label>
                 <input
                   type="email"
                   placeholder="you@example.com"
-                  className="w-full border-2 border-[#e2e8f0] bg-[#f8fafc] rounded-xl py-5 px-6 outline-none text-[#1e293b] text-base transition-colors focus:border-[#0EA5E9] text-center"
+                  className="w-full border-2 border-[#e2e8f0] bg-[#f8fafc] outline-none text-[#1e293b] transition-colors focus:border-[#0EA5E9] text-center"
+                  style={{ borderRadius: "0.75rem", padding: "1.25rem 1.5rem", fontSize: "1rem" }}
                 />
               </div>
 
-              <div className="flex flex-col w-full items-center gap-4">
-                <label className="text-[0.875rem] font-extrabold text-[#0f2846] uppercase tracking-wider text-center">Message</label>
+              <div className="flex flex-col w-full items-center" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <label className="font-extrabold text-[#0f2846] uppercase tracking-wider text-center" style={{ fontSize: "0.875rem" }}>Message</label>
                 <textarea
                   rows={5}
                   placeholder="How can we help you?"
-                  className="w-full border-2 border-[#e2e8f0] bg-[#f8fafc] rounded-xl py-5 px-6 outline-none text-[#1e293b] text-base transition-colors focus:border-[#0EA5E9] resize-none text-center"
+                  className="w-full border-2 border-[#e2e8f0] bg-[#f8fafc] outline-none text-[#1e293b] transition-colors focus:border-[#0EA5E9] resize-none text-center"
+                  style={{ borderRadius: "0.75rem", padding: "1.25rem 1.5rem", fontSize: "1rem" }}
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full max-w-[300px] bg-[#0EA5E9] text-white font-extrabold text-lg py-5 rounded-xl border-none cursor-pointer mt-6 shadow-[0_8px_20px_rgba(14,165,233,0.3)] hover:bg-[#0284c7] hover:-translate-y-0.5 transition-all mx-auto"
+                className="w-full bg-[#0EA5E9] text-white font-extrabold cursor-pointer border-none hover:bg-[#0284c7] hover:-translate-y-0.5 transition-all mx-auto"
+                style={{ maxWidth: "300px", fontSize: "1.125rem", padding: "1.25rem", borderRadius: "0.75rem", marginTop: "1.5rem", boxShadow: "0 8px 20px rgba(14,165,233,0.3)" }}
               >
                 Send Message
               </button>
@@ -56,16 +60,16 @@ export default function ContactPage() {
           </form>
 
           {/* Contact Info Cards */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center w-full gap-10 pb-20">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center w-full" style={{ display: "flex", gap: "2.5rem", paddingBottom: "5rem" }}>
             {[
               { icon: "📧", label: "Email", value: "manisha36180@gmail.com" },
               { icon: "📞", label: "Phone", value: "123456789" },
               { icon: "📍", label: "Location", value: "Delhi, India" },
             ].map((c) => (
-              <div key={c.label} className="flex-1 min-w-[200px] bg-white rounded-3xl p-12 text-center border border-slate-100 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center">
-                <div className="text-5xl mb-6">{c.icon}</div>
-                <div className="text-[0.9rem] font-extrabold text-[#0f2846] uppercase tracking-wider mb-3 text-center">{c.label}</div>
-                <div className="text-[#64748b] text-[0.95rem] text-center">{c.value}</div>
+              <div key={c.label} className="bg-white text-center border border-slate-100 shadow-md hover:shadow-lg transition-shadow flex flex-col items-center" style={{ flex: 1, minWidth: "200px", borderRadius: "1.5rem", padding: "3rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <div style={{ fontSize: "3rem", marginBottom: "1.5rem" }}>{c.icon}</div>
+                <div className="font-extrabold text-[#0f2846] uppercase tracking-wider text-center" style={{ fontSize: "0.9rem", marginBottom: "0.75rem" }}>{c.label}</div>
+                <div className="text-[#64748b] text-center" style={{ fontSize: "0.95rem" }}>{c.value}</div>
               </div>
             ))}
           </div>
