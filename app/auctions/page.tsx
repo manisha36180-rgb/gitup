@@ -126,7 +126,8 @@ export default async function AuctionsPage({
     }
 
     return (
-      <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 pt-12 pb-32">
+      <div className="w-full flex flex-col items-center pt-12 pb-32">
+        <div className="w-full max-w-[1280px] px-4 sm:px-6">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16 lg:mb-20">
           <h1 className="text-3xl sm:text-4xl font-bold text-[#0f2846] mb-3">
@@ -146,7 +147,7 @@ export default async function AuctionsPage({
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-6">
+          <div className="flex flex-wrap justify-center gap-8 px-4 sm:px-6">
             {vessels.map((vessel: Vessel) => (
               <Link
                 key={vessel.id}
@@ -200,6 +201,7 @@ export default async function AuctionsPage({
             ))}
           </div>
         )}
+        </div>
       </div>
     );
   } catch (err: unknown) {
