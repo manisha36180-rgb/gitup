@@ -65,7 +65,7 @@ export default function Home() {
       {/* ── Why Choose Marine Auctions ── */}
       <section className="w-full bg-[#f8f9fa] py-20 px-6 text-center">
         <div className="w-full max-w-[960px] mx-auto flex flex-col items-center">
-          <h2 className="text-[1.85rem] font-extrabold text-[#0f2846] mb-14">
+          <h2 className="text-[1.85rem] font-extrabold text-[#0f2846] mb-28">
             Why Choose Marine Auctions?
           </h2>
           
