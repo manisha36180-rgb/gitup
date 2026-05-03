@@ -30,10 +30,8 @@ export default function RootLayout({
         </nav>
 
         {/* PAGE CONTENT */}
-        <main style={{ flex: 1, width: "100%", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <div style={{ width: "100%" }}>
-            {children}
-          </div>
+        <main className="flex-1 w-full block">
+          {children}
         </main>
 
         {/* FOOTER */}
