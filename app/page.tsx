@@ -69,8 +69,8 @@ export default function Home() {
             Why Choose Marine Auctions?
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-            <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full" style={{ gap: "32px" }}>
+            <div className="bg-white rounded-2xl text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start" style={{ padding: "40px 32px" }}>
               <div className="text-[3rem]" style={{ marginBottom: "16px" }}>🚢</div>
               <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Curated Vessel Listings</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
@@ -78,7 +78,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
+            <div className="bg-white rounded-2xl text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start" style={{ padding: "40px 32px" }}>
               <div className="text-[3rem]" style={{ marginBottom: "16px" }}>🔍</div>
               <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Powerful Smart Search</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
@@ -86,7 +86,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
+            <div className="bg-white rounded-2xl text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start" style={{ padding: "40px 32px" }}>
               <div className="text-[3rem]" style={{ marginBottom: "16px" }}>📋</div>
               <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Complete Vessel Profiles</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
@@ -94,7 +94,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
+            <div className="bg-white rounded-2xl text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start" style={{ padding: "40px 32px" }}>
               <div className="text-[3rem]" style={{ marginBottom: "16px" }}>🌏</div>
               <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Global Coverage</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
@@ -102,7 +102,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
+            <div className="bg-white rounded-2xl text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start" style={{ padding: "40px 32px" }}>
               <div className="text-[3rem]" style={{ marginBottom: "16px" }}>⚡</div>
               <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Real-Time Updates</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
@@ -110,7 +110,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
+            <div className="bg-white rounded-2xl text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start" style={{ padding: "40px 32px" }}>
               <div className="text-[3rem]" style={{ marginBottom: "16px" }}>🔒</div>
               <h3 className="text-[1rem] font-bold text-[#0f2846]" style={{ marginBottom: "12px" }}>Trusted & Transparent</h3>
               <p className="text-[0.875rem] text-[#718096] leading-[1.7]">
