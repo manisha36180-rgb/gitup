@@ -128,11 +128,11 @@ export default async function AuctionsPage({
     return (
       <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 pt-12 pb-32">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#0f2846] mb-3">
+        <div className="flex flex-col items-center text-center mb-16 lg:mb-20">
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#0f2846] mb-3">
             {query ? `Results for "${resolvedParams?.query}"` : "Active Auctions"}
           </h1>
-          <p className="text-gray-500 text-lg mb-6">
+          <p className="text-gray-500 text-base sm:text-lg mb-6">
             {vessels.length} vessel{vessels.length !== 1 ? "s" : ""} found
           </p>
           <div className="w-16 h-1 bg-[#0EA5E9] rounded-full mb-8" />
@@ -140,21 +140,21 @@ export default async function AuctionsPage({
 
         {vessels.length === 0 ? (
           <div className="text-center py-20 px-4">
-            <p className="text-gray-500 text-lg md:text-xl">No vessels found matching your search.</p>
+            <p className="text-gray-500 text-lg sm:text-xl">No vessels found matching your search.</p>
             <Link href="/auctions" className="mt-6 inline-block text-[#0EA5E9] font-semibold hover:underline">
               Clear search
             </Link>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-8 px-4 sm:px-6">
             {vessels.map((vessel: Vessel) => (
               <Link
                 key={vessel.id}
                 href={`/vessels/${vessel.id}`}
-                className="auction-card flex flex-col w-full max-w-[380px] bg-white rounded-3xl shadow-[0_10px_30px_rgba(0,0,0,0.06)] overflow-hidden border border-slate-100 no-underline transition-all duration-200"
+                className="auction-card flex flex-col w-full max-w-[380px] bg-white rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.06)] overflow-hidden border border-[#f1f5f9] no-underline transition-all duration-200 mx-auto lg:mx-0"
               >
                 {/* Image Container */}
-                <div className="relative w-full h-[240px] sm:h-[260px] overflow-hidden">
+                <div className="relative w-full h-[220px] sm:h-[260px] overflow-hidden">
                   <Image
                     src={vessel.image || "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800"}
                     alt={vessel.name || "Vessel"}
@@ -163,18 +163,18 @@ export default async function AuctionsPage({
                     unoptimized
                   />
                   {/* Status Badge */}
-                  <div className="absolute top-4 right-4 bg-[#0EA5E9] text-white text-xs font-extrabold py-1.5 px-3.5 rounded-full uppercase tracking-wide shadow-md">
+                  <div className="absolute top-4 right-4 bg-[#0EA5E9] text-white text-[0.7rem] sm:text-[0.75rem] font-extrabold py-1.5 px-3.5 rounded-full uppercase tracking-wider shadow-md">
                     {vessel.status}
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 md:p-7 flex flex-col flex-grow">
-                  <h2 className="text-lg md:text-xl font-extrabold text-[#0f2846] mb-4 leading-snug line-clamp-2">
+                <div className="p-6 sm:p-7 flex flex-col flex-grow">
+                  <h2 className="text-lg sm:text-xl font-extrabold text-[#0f2846] mb-4 leading-tight line-clamp-2">
                     {vessel.name}
                   </h2>
 
-                  <div className="flex flex-col gap-2.5 text-slate-500 text-sm mb-6 flex-grow">
+                  <div className="flex flex-col gap-2.5 text-[#64748b] text-sm mb-6 flex-grow">
                     <div className="flex items-center gap-2.5">
                       <span className="text-base">📍</span>
                       <span className="whitespace-nowrap overflow-hidden text-ellipsis">{vessel.location || "Location unavailable"}</span>
@@ -189,8 +189,8 @@ export default async function AuctionsPage({
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between mt-auto pt-5 border-t border-slate-100">
-                    <span className="text-[#0EA5E9] font-extrabold text-xl md:text-2xl">{vessel.price}</span>
+                  <div className="flex items-center justify-between mt-auto pt-5 border-t border-[#f1f5f9]">
+                    <span className="text-[#0EA5E9] font-extrabold text-xl sm:text-[1.3rem]">{vessel.price}</span>
                     <span className="text-[#0f2846] font-bold text-sm flex items-center gap-1">
                       Details <span>→</span>
                     </span>
@@ -206,9 +206,9 @@ export default async function AuctionsPage({
     const error = err instanceof Error ? err : new Error(String(err));
     return (
       <div className="py-24 px-6 text-center max-w-4xl mx-auto">
-        <h1 className="text-red-500 text-2xl md:text-3xl font-bold mb-4">Error Loading Auctions</h1>
+        <h1 className="text-red-500 text-2xl sm:text-3xl font-bold mb-4">Error Loading Auctions</h1>
         <p className="text-gray-600 mb-6">{error.message}</p>
-        <pre className="text-left inline-block p-6 bg-gray-100 rounded-lg overflow-x-auto w-full text-sm">
+        <pre className="text-left inline-block p-6 bg-[#f5f5f5] rounded-lg overflow-x-auto w-full text-sm">
           {error.stack}
         </pre>
       </div>

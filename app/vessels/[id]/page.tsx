@@ -78,27 +78,27 @@ export default async function VesselDetailsPage(props: {
   const hasLocalImage = vessel.image?.startsWith("/vessels/eco/");
 
   return (
-    <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10 font-sans">
+    <div className="w-full max-w-[800px] mx-auto px-6 py-10 lg:py-10">
 
       {/* Back */}
-      <Link href="/auctions" className="text-[#0f2846] font-semibold text-sm hover:underline flex items-center mb-6">
+      <Link href="/auctions" className="text-[#0f2846] font-semibold no-underline text-[0.9rem]">
         ← Back to Auctions
       </Link>
 
       {/* Status + Title */}
-      <div className="text-center my-6">
-        <span className="bg-[#0EA5E9] text-white text-xs font-bold py-1 px-3.5 rounded-full inline-block mb-3">
+      <div className="text-center my-6 lg:my-6">
+        <span className="bg-[#0EA5E9] text-white text-[0.8rem] font-bold py-1 px-3.5 rounded-full">
           {vessel.status}
         </span>
-        <h1 className="text-2xl md:text-3xl font-extrabold text-[#0f2846] mt-2 mb-2 leading-tight">
+        <h1 className="text-2xl sm:text-3xl lg:text-[2rem] font-extrabold text-[#0f2846] mt-3.5 lg:mt-3.5 mb-1 lg:mb-1 leading-tight">
           {vessel.name}
         </h1>
-        <p className="text-[#0EA5E9] font-bold text-xl m-0">{vessel.price}</p>
+        <p className="text-[#0EA5E9] font-bold text-xl sm:text-[1.25rem] m-0">{vessel.price}</p>
       </div>
 
       {/* Image Gallery */}
       <div className="flex flex-col gap-3 mb-8">
-        <div className="relative w-full h-[300px] sm:h-[420px] rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
+        <div className="relative w-full h-[300px] sm:h-[420px] rounded-2xl overflow-hidden shadow-lg lg:shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
           {hasLocalImage ? (
             <img src={(vessel.images && vessel.images[0]) || vessel.image} alt={vessel.name} className="w-full h-full object-cover" />
           ) : (
@@ -107,9 +107,9 @@ export default async function VesselDetailsPage(props: {
         </div>
         
         {vessel.images && vessel.images.length > 1 && (
-          <div className="flex gap-3 overflow-x-auto pb-2 snap-x">
+          <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
             {vessel.images.slice(1).map((img, idx) => (
-              <div key={idx} className="relative min-w-[100px] sm:min-w-[120px] h-[70px] sm:h-[80px] rounded-lg overflow-hidden flex-shrink-0 snap-start">
+              <div key={idx} className="relative min-w-[120px] h-20 rounded-lg overflow-hidden flex-shrink-0">
                 {hasLocalImage ? (
                   <img src={img} alt={`${vessel.name} thumbnail`} className="w-full h-full object-cover" />
                 ) : (
@@ -122,7 +122,7 @@ export default async function VesselDetailsPage(props: {
       </div>
 
       {/* Details Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 mb-7">
         {[
           { icon: "📍", label: "Location", value: vessel.location || "—" },
           { icon: "📅", label: "Year",     value: vessel.year    || "N/A" },
@@ -133,11 +133,11 @@ export default async function VesselDetailsPage(props: {
           { icon: "⚙️", label: "Engine",   value: vessel.engine  },
           { icon: "🌐", label: "Source",   value: vessel.source  || "—" },
         ].filter(item => item.value).map(item => (
-          <div key={item.label} className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-center gap-3">
-            <span className="text-2xl">{item.icon}</span>
-            <div className="overflow-hidden">
-              <div className="text-[0.7rem] text-slate-400 uppercase tracking-wider font-semibold">{item.label}</div>
-              <div className="text-[0.95rem] font-bold text-[#0f2846] whitespace-nowrap overflow-hidden text-ellipsis">{item.value}</div>
+          <div key={item.label} className="bg-[#f8f9fa] border border-[#e2e8f0] rounded-xl p-4 sm:p-5 flex items-center gap-3">
+            <span className="text-2xl sm:text-[1.5rem]">{item.icon}</span>
+            <div>
+              <div className="text-[0.7rem] color-[#94a3b8] uppercase tracking-wider font-semibold">{item.label}</div>
+              <div className="text-[0.95rem] font-bold text-[#0f2846]">{item.value}</div>
             </div>
           </div>
         ))}
@@ -145,16 +145,16 @@ export default async function VesselDetailsPage(props: {
 
       {/* Auction Info */}
       {vessel.auctionInfo && (
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 sm:p-5 mb-6">
-          <div className="font-bold text-blue-700 mb-1 text-sm">📢 AUCTION DETAILS</div>
-          <div className="text-blue-900 text-sm md:text-base leading-relaxed">{vessel.auctionInfo}</div>
+        <div className="bg-[#eff6ff] border border-[#bfdbfe] rounded-xl p-4 sm:p-5 mb-6">
+          <div className="font-bold text-[#1d4ed8] mb-1 text-[0.85rem]">📢 AUCTION DETAILS</div>
+          <div className="text-[#1e3a5f] text-[0.9rem]">{vessel.auctionInfo}</div>
         </div>
       )}
 
       {/* Description */}
-      <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 mb-6">
+      <div className="bg-white border border-[#e2e8f0] rounded-2xl p-7 mb-6">
         <h2 className="text-xl font-extrabold text-[#0f2846] mb-3">About This Vessel</h2>
-        <p className="text-slate-600 leading-relaxed text-sm sm:text-base m-0 whitespace-pre-line">{vessel.description}</p>
+        <p className="text-[#4a5568] leading-relaxed text-[0.95rem] m-0">{vessel.description}</p>
       </div>
 
     </div>
