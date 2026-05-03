@@ -41,18 +41,18 @@ export default function Home() {
       </div>
 
       {/* ── Welcome / Overview ── */}
-      <section className="w-full bg-white py-20 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <section className="w-full bg-white py-24 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[780px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-          <h2 className="text-[2.25rem] font-extrabold text-[#0f2846] mb-4" style={{ textAlign: "center", width: "100%" }}>
+          <h2 className="text-[2.5rem] font-extrabold text-[#0f2846] mt-4 mb-6" style={{ textAlign: "center", width: "100%" }}>
             Welcome to Marine Auctions
           </h2>
-          <div className="w-16 h-1 bg-[#0EA5E9] mb-24 rounded-full" style={{ margin: "0 auto 6rem auto" }} />
+          <div className="w-16 h-1 bg-[#0EA5E9] mb-12 rounded-full" style={{ margin: "0 auto" }} />
           
-          <div className="flex flex-col w-full" style={{ textAlign: "center", alignItems: "center" }}>
-            <p className="text-[1.05rem] text-[#4a5568] leading-[1.85] mb-5" style={{ textAlign: "center", width: "100%" }}>
+          <div className="flex flex-col w-full gap-6" style={{ textAlign: "center", alignItems: "center" }}>
+            <p className="text-[1.05rem] text-[#4a5568] leading-[1.85]" style={{ textAlign: "center", width: "100%" }}>
               Marine Auctions is your premier global destination for discovering, bidding on, and acquiring luxury yachts, sport fishing vessels, commercial crafts, and high-performance speedboats. We aggregate listings directly from the world's most trusted marine auction houses and present them in a clean, searchable interface designed for both experienced buyers and first-time bidders.
             </p>
-            <p className="text-[1.05rem] text-[#4a5568] leading-[1.85] mb-5" style={{ textAlign: "center", width: "100%" }}>
+            <p className="text-[1.05rem] text-[#4a5568] leading-[1.85]" style={{ textAlign: "center", width: "100%" }}>
               Every vessel on our platform undergoes a thorough data verification and cleaning process before it is published. We extract rich details — including vessel name, year of manufacture, hull type, location, and auction status — to give you a complete picture before you commit to any bid.
             </p>
             <p className="text-[1.05rem] text-[#4a5568] leading-[1.85]" style={{ textAlign: "center", width: "100%" }}>
@@ -63,13 +63,13 @@ export default function Home() {
       </section>
 
       {/* ── Why Choose Marine Auctions ── */}
-      <section className="w-full bg-[#f8f9fa] py-20 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <section className="w-full bg-[#f8f9fa] py-24 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[960px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <h2 className="text-[1.85rem] font-extrabold text-[#0f2846] mb-28" style={{ textAlign: "center", width: "100%" }}>
+          <h2 className="text-[2.5rem] font-extrabold text-[#0f2846] mt-4 mb-16" style={{ textAlign: "center", width: "100%" }}>
             Why Choose Marine Auctions?
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
             <div className="bg-white rounded-2xl py-9 px-7 text-center border border-[#e2e8f0] shadow-[0_1px_6px_rgba(0,0,0,0.06)] flex flex-col items-center justify-start">
               <div className="text-[3rem] mb-4">🚢</div>
               <h3 className="text-[1rem] font-bold text-[#0f2846] mb-[10px]">Curated Vessel Listings</h3>
@@ -122,17 +122,17 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="w-full bg-white py-20 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <section className="w-full bg-white py-24 px-6" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div className="w-full max-w-[640px]" style={{ margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-          <h2 className="text-[2rem] font-extrabold text-[#0f2846] mb-16" style={{ textAlign: "center", width: "100%" }}>
+          <h2 className="text-[2.5rem] font-extrabold text-[#0f2846] mt-4 mb-8" style={{ textAlign: "center", width: "100%" }}>
             Ready to Find Your Vessel?
           </h2>
-          <p className="text-[1.05rem] text-[#718096] leading-[1.7] mb-9" style={{ textAlign: "center", width: "100%" }}>
+          <p className="text-[1.05rem] text-[#718096] leading-[1.7] mb-12" style={{ textAlign: "center", width: "100%" }}>
             Browse live listings from top marine auction houses. Use our smart search to find your perfect vessel and place your bid today.
           </p>
           <Link 
             href="/auctions" 
-            className="inline-block bg-[#0EA5E9] text-white font-bold px-12 py-4 rounded-xl text-[1.05rem] shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:bg-[#0284c7] transition-colors no-underline"
+            className="inline-block bg-[#0EA5E9] text-white font-bold px-12 py-4 mb-4 rounded-xl text-[1.05rem] shadow-[0_4px_16px_rgba(14,165,233,0.35)] hover:bg-[#0284c7] transition-colors no-underline"
           >
             Browse Auctions &rarr;
           </Link>
