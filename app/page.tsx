@@ -41,21 +41,21 @@ export default function Home() {
       </div>
 
       {/* ── Welcome / Overview ── */}
-      <section className="w-full bg-white py-16 px-6 sm:py-24 lg:py-28 flex flex-col items-center text-center">
+      <section className="w-full bg-white py-16 px-6 sm:py-20 lg:py-24 flex flex-col items-center text-center">
         <div className="w-full max-w-[800px] flex flex-col items-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0f2846] mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f2846] mb-4 lg:mb-6">
             Welcome to Marine Auctions
           </h2>
-          <div className="w-20 h-1.5 bg-[#0EA5E9] mb-16 sm:mb-20 lg:mb-24 rounded-full" />
+          <div className="w-16 h-1 bg-[#0EA5E9] mb-10 sm:mb-12 lg:mb-16 rounded-full" />
           
-          <div className="flex flex-col gap-12 text-center w-full max-w-[900px]">
-            <p className="text-[0.95rem] sm:text-base lg:text-[1.05rem] text-gray-500 lg:text-[#64748b] leading-relaxed lg:leading-[1.9]">
+          <div className="flex flex-col gap-8 text-center w-full max-w-[800px]">
+            <p className="text-[0.9rem] sm:text-[0.95rem] lg:text-[1rem] text-[#64748b] leading-[1.8] lg:leading-[1.9]">
               Marine Auctions is your premier global destination for discovering, bidding on, and acquiring luxury yachts, sport fishing vessels, commercial crafts, and high-performance speedboats. We aggregate listings directly from the world's most trusted marine auction houses and present them in a clean, searchable interface designed for both experienced buyers and first-time bidders.
             </p>
-            <p className="text-[0.95rem] sm:text-base lg:text-[1.05rem] text-gray-500 lg:text-[#64748b] leading-relaxed lg:leading-[1.9]">
+            <p className="text-[0.9rem] sm:text-[0.95rem] lg:text-[1rem] text-[#64748b] leading-[1.8] lg:leading-[1.9]">
               Every vessel on our platform undergoes a thorough data verification and cleaning process before it is published. We extract rich details — including vessel name, year of manufacture, hull type, location, and auction status — to give you a complete picture before you commit to any bid.
             </p>
-            <p className="text-[0.95rem] sm:text-base lg:text-[1.05rem] text-gray-500 lg:text-[#64748b] leading-relaxed lg:leading-[1.9]">
+            <p className="text-[0.9rem] sm:text-[0.95rem] lg:text-[1rem] text-[#64748b] leading-[1.8] lg:leading-[1.9]">
               Whether you're searching for an unreserved bargain or a premium cruiser at auction, Marine Auctions provides a transparent, fast, and reliable browsing experience. Our mission is to connect serious buyers with authentic vessels, eliminating guesswork and putting the best of the marine market at your fingertips.
             </p>
           </div>
@@ -63,57 +63,57 @@ export default function Home() {
       </section>
 
       {/* ── Why Choose Marine Auctions ── */}
-      <section className="w-full bg-gray-50 py-20 sm:py-28 lg:py-36 px-6 flex flex-col items-center">
-        <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0f2846] mb-16 sm:mb-20 lg:mb-24 text-center">
+      <section className="w-full bg-[#f8fafc] py-16 sm:py-20 lg:py-28 px-6 flex flex-col items-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f2846] mb-12 sm:mb-16 lg:mb-20 text-center">
             Why Choose Marine Auctions?
           </h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 w-full">
-            <div className="bg-white p-10 sm:p-12 rounded-3xl shadow-md hover:shadow-xl transition-shadow flex flex-col items-center text-center h-full justify-start">
-              <div className="text-5xl sm:text-6xl mb-8">🚢</div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0f2846] mb-5">Curated Vessel Listings</h3>
-              <p className="text-gray-600 leading-relaxed text-[1.05rem]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full">
+            <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center h-full justify-start border border-gray-100">
+              <div className="text-4xl sm:text-5xl mb-6 drop-shadow-sm">🚢</div>
+              <h3 className="text-[1.1rem] sm:text-[1.2rem] font-bold text-[#0f2846] mb-4">Curated Vessel Listings</h3>
+              <p className="text-[#64748b] leading-[1.8] text-[0.9rem] sm:text-[0.95rem]">
                 Listings are carefully scraped, cleaned, and categorised from leading marine auction houses.
               </p>
             </div>
 
-            <div className="bg-white p-10 sm:p-12 rounded-3xl shadow-md hover:shadow-xl transition-shadow flex flex-col items-center text-center h-full justify-start">
-              <div className="text-5xl sm:text-6xl mb-8">🔍</div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0f2846] mb-5">Powerful Smart Search</h3>
-              <p className="text-gray-600 leading-relaxed text-[1.05rem]">
+            <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center h-full justify-start border border-gray-100">
+              <div className="text-4xl sm:text-5xl mb-6 drop-shadow-sm">🔍</div>
+              <h3 className="text-[1.1rem] sm:text-[1.2rem] font-bold text-[#0f2846] mb-4">Powerful Smart Search</h3>
+              <p className="text-[#64748b] leading-[1.8] text-[0.9rem] sm:text-[0.95rem]">
                 Filter vessels instantly by name, location, or vessel type in real-time.
               </p>
             </div>
 
-            <div className="bg-white p-10 sm:p-12 rounded-3xl shadow-md hover:shadow-xl transition-shadow flex flex-col items-center text-center h-full justify-start">
-              <div className="text-5xl sm:text-6xl mb-8">📋</div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0f2846] mb-5">Complete Vessel Profiles</h3>
-              <p className="text-gray-600 leading-relaxed text-[1.05rem]">
+            <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center h-full justify-start border border-gray-100">
+              <div className="text-4xl sm:text-5xl mb-6 drop-shadow-sm">📋</div>
+              <h3 className="text-[1.1rem] sm:text-[1.2rem] font-bold text-[#0f2846] mb-4">Complete Vessel Profiles</h3>
+              <p className="text-[#64748b] leading-[1.8] text-[0.9rem] sm:text-[0.95rem]">
                 Year, hull type, location, auction status, and full description on every listing.
               </p>
             </div>
 
-            <div className="bg-white p-10 sm:p-12 rounded-3xl shadow-md hover:shadow-xl transition-shadow flex flex-col items-center text-center h-full justify-start">
-              <div className="text-5xl sm:text-6xl mb-8">🌍</div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0f2846] mb-5">Global Coverage</h3>
-              <p className="text-gray-600 leading-relaxed text-[1.05rem]">
+            <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center h-full justify-start border border-gray-100">
+              <div className="text-4xl sm:text-5xl mb-6 drop-shadow-sm">🌍</div>
+              <h3 className="text-[1.1rem] sm:text-[1.2rem] font-bold text-[#0f2846] mb-4">Global Coverage</h3>
+              <p className="text-[#64748b] leading-[1.8] text-[0.9rem] sm:text-[0.95rem]">
                 Vessels sourced from auction houses across Australia, Europe, and beyond.
               </p>
             </div>
 
-            <div className="bg-white p-10 sm:p-12 rounded-3xl shadow-md hover:shadow-xl transition-shadow flex flex-col items-center text-center h-full justify-start">
-              <div className="text-5xl sm:text-6xl mb-8">⚡</div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0f2846] mb-5">Real-Time Updates</h3>
-              <p className="text-gray-600 leading-relaxed text-[1.05rem]">
+            <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center h-full justify-start border border-gray-100">
+              <div className="text-4xl sm:text-5xl mb-6 drop-shadow-sm">⚡</div>
+              <h3 className="text-[1.1rem] sm:text-[1.2rem] font-bold text-[#0f2846] mb-4">Real-Time Updates</h3>
+              <p className="text-[#64748b] leading-[1.8] text-[0.9rem] sm:text-[0.95rem]">
                 Our platform fetches fresh vessel data automatically on every page load.
               </p>
             </div>
 
-            <div className="bg-white p-10 sm:p-12 rounded-3xl shadow-md hover:shadow-xl transition-shadow flex flex-col items-center text-center h-full justify-start">
-              <div className="text-5xl sm:text-6xl mb-8">🔒</div>
-              <h3 className="text-xl sm:text-2xl font-bold text-[#0f2846] mb-5">Trusted & Transparent</h3>
-              <p className="text-gray-600 leading-relaxed text-[1.05rem]">
+            <div className="bg-white p-8 sm:p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow flex flex-col items-center text-center h-full justify-start border border-gray-100">
+              <div className="text-4xl sm:text-5xl mb-6 drop-shadow-sm">🔒</div>
+              <h3 className="text-[1.1rem] sm:text-[1.2rem] font-bold text-[#0f2846] mb-4">Trusted & Transparent</h3>
+              <p className="text-[#64748b] leading-[1.8] text-[0.9rem] sm:text-[0.95rem]">
                 Every listing shows its original auction details so you can bid with confidence.
               </p>
             </div>
